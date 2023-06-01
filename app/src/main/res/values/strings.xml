@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">FarmGenius</string>
+    <string name="pertanian_splash_screen">Pertanian yang lebih cerdas dimulai dari sini</string>
+    <string name="farmgenius_splash_screen">by FarmGenius</string>
+    <string name="masuk_sekarang">Masuk Sekarang</string>
+    <string name="silakan_masuk">Silakan masukkan detail di bawah ini untuk melanjutkan</string>
+    <string name="email_hint">riyandifirman@gmail.com</string>
+    <string name="password_hint">********</string>
+    <string name="masuk_button">MASUK</string>
+    <string name="belum_daftar">Belum memiliki akun? </string>
+    <string name="daftar_disini">Daftar disini</string>
+    <string name="daftar">Daftar</string>
+    <string name="nama_hint">Riyandi Firman</string>
+    <string name="daftar_button">DAFTAR</string>
+    <string name="sudah_punya_akun">Sudah punya akun? </string>
+    <string name="login_disini">Masuk disini</string>
+    <string name="email">Email</string>
+    <string name="nama">Nama</string>
+    <string name="password">Password</string>
 </resources>

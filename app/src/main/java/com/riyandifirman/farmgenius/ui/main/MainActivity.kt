@@ -1,7 +1,8 @@
-package com.riyandifirman.farmgenius
+package com.riyandifirman.farmgenius.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.riyandifirman.farmgenius.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
