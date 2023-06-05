@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileSettingActivity">
+
+  <TextView
+      android:id="@+id/title_page"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:text="@string/title_pengaturan_profil"
+      android:textAppearance="@style/title_page"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/back_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="28dp"
+      app:layout_constraintBottom_toBottomOf="@+id/title_page"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/title_page"
+      app:srcCompat="@drawable/ic_back" />
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/iv_profile"
+      android:layout_width="200dp"
+      android:layout_height="200dp"
+      android:layout_marginTop="32dp"
+      android:src="@drawable/farmer"
+      app:civ_border_color="@color/green_500"
+      app:civ_border_width="2dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/title_page" />
+
+  <TextView
+      android:id="@+id/tv_nama"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="28dp"
+      android:layout_marginTop="25dp"
+      android:text="@string/nama"
+      android:textAppearance="@style/profile_page_menu"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayoutNama"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="28dp"
+      android:layout_marginEnd="28dp"
+      android:hint="@string/riyandi"
+      android:enabled="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_nama"
+      app:startIconDrawable="@drawable/ic_nama"
+      app:startIconTint="#7ED957">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:id="@+id/tv_email"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="28dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/email"
+      android:textAppearance="@style/profile_page_menu"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNama" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayoutEmail"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="28dp"
+      android:layout_marginEnd="28dp"
+      android:hint="@string/email_riyandi"
+      android:enabled="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_email"
+      app:startIconDrawable="@drawable/ic_email"
+      app:startIconTint="#7ED957">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
