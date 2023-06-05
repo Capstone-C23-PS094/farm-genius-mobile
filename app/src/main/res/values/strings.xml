@@ -49,4 +49,16 @@
     <string name="desc_pusat_bantuan">Apakah Anda memiliki pertanyaan atau menghadapi masalah tertentu? Tidak perlu khawatir! Pusat Bantuan juga menyediakan akses langsung ke tim dukungan pelanggan yang siap membantu Anda dengan cepat dan efisien. Anda dapat mengajukan pertanyaan Anda atau berbagi masalah Anda melalui formulir atau obrolan langsung, dan kami akan dengan senang hati memberikan solusi terbaik untuk Anda.</string>
     <string name="kontak_layanan_pelanggan">Kontak Layanan Pelanggan</string>
     <string name="email_farmgenius">farmgenius@gmail.com</string>
+    <string name="kepemilikan_internal">1. Kepemilikan Internal</string>
+    <string name="ketersediaan_aplikasi">2. Ketersediaan dan Penggunaan Aplikasi</string>
+    <string name="tanggung_jawab_pengguna">3. Tanggung Jawab Pengguna</string>
+    <string name="privasi_keamanan_data">4. Privasi dan Keamanan Data</string>
+    <string name="perubahan_penghentian">5. Perubahan dan Penghentian</string>
+    <string name="batasan_tanggung_jawab">6. Batasan Tanggung Jawab</string>
+    <string name="kepemilikan_internal_teks">a. Seluruh hak kekayaan intelektual terkait dengan FarmGenius, termasuk namun tidak terbatas pada merek dagang, hak cipta, dan paten, tetap menjadi milik FarmGenius atau pihak ketiga yang memiliki hak.\nb. Dilarang melakukan reproduksi, penggandaan, pengubahan, atau distribusi konten FarmGenius tanpa izin tertulis yang sah dari FarmGenius.</string>
+    <string name="ketersediaan_aplikasi_teks">a. FarmGenius akan berusaha menjaga ketersediaan aplikasi secara terus-menerus, namun tidak dapat menjamin bahwa aplikasi akan beroperasi tanpa gangguan atau kesalahan.\nb. Penggunaan FarmGenius harus sesuai dengan hukum yang berlaku. Tidak diperbolehkan menggunakan aplikasi ini untuk tujuan ilegal atau melanggar hak-hak orang lain.</string>
+    <string name="tanggung_jawab_pengguna_teks">a. Pengguna bertanggung jawab penuh atas penggunaan dan konsekuensi yang timbul dari penggunaan FarmGenius.\nb. Penggunaan FarmGenius harus mengikuti pedoman dan instruksi yang tercantum dalam aplikasi.\nc. Penggunaan FarmGenius tidak boleh mengganggu kinerja atau keamanan aplikasi atau merugikan pengguna lain.</string>
+    <string name="privasi_keamanan_data_teks">a. FarmGenius akan menjaga kerahasiaan informasi yang dikumpulkan dari pengguna sesuai dengan Kebijakan Privasi yang berlaku.\nb. Pengguna bertanggung jawab atas keamanan akun dan tidak boleh memberikan akses ke akun mereka kepada pihak ketiga tanpa izin tertulis dari FarmGenius.</string>
+    <string name="perubahan_penghentian_teks">a. FarmGenius berhak untuk mengubah atau memperbarui syarat dan ketentuan ini dari waktu ke waktu tanpa pemberitahuan sebelumnya.\nb. FarmGenius juga berhak untuk menghentikan atau menangguhkan akses pengguna ke FarmGenius dengan alasan apa pun, termasuk pelanggaran syarat dan ketentuan ini.</string>
+    <string name="batasan_tanggung_jawab_teks">a. FarmGenius tidak bertanggung jawab atas kerugian, cedera, atau kerusakan yang timbul dari penggunaan aplikasi ini.\nb. FarmGenius tidak memberikan jaminan eksplisit atau implisit mengenai keakuratan, keandalan, atau ketersediaan aplikasi ini.</string>
 </resources>

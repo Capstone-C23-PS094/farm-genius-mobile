@@ -35,6 +35,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:textColor="@color/black"
+        android:lineSpacingExtra="2sp"
         android:textSize="16sp"
         android:text="@string/desc_pusat_bantuan"
         android:justificationMode="inter_word"
