@@ -37,7 +37,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/user_filled_icon"
+        android:background="@drawable/ic_user_filled"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_profile"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_profile"
         app:layout_constraintStart_toStartOf="@+id/rectangle_profile"
@@ -50,7 +50,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
         android:layout_marginTop="18dp"
-        android:background="@drawable/summary_icon"
+        android:background="@drawable/ic_summary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hello_user" />
 
@@ -104,7 +104,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
-        android:background="@drawable/lampu_icon"
+        android:background="@drawable/ic_lamp"
         app:layout_constraintEnd_toEndOf="@+id/card_rectangle"
         app:layout_constraintStart_toStartOf="@+id/card_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/tv_rekomendasi_tanaman" />
@@ -169,7 +169,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
         android:layout_marginTop="18dp"
-        android:background="@drawable/flower_icon"
+        android:background="@drawable/ic_flower"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_rectangle" />
 
@@ -199,7 +199,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="28dp"
-        android:background="@drawable/lihat_lebih_icon"
+        android:background="@drawable/ic_see_more"
         app:layout_constraintBottom_toBottomOf="@+id/hasil_deteksi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/hasil_deteksi" />
@@ -223,7 +223,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="28dp"
-        android:src="@drawable/deteksi_icon"
+        android:src="@drawable/ic_detection"
         android:backgroundTint="@color/green_500"
         app:tint="@color/white"
         app:fabCustomSize="80dp"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -10,15 +10,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmGenius"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".ui.profile.ProfileSettingActivity"
+            android:name=".ui.profile.ProfileHelpCentreActivity"
             android:theme="@style/FarmGenius_NoAppBar"
             android:exported="false" />
         <activity
+            android:name=".ui.profile.ProfileSettingActivity"
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar" />
+        <activity
             android:name=".ui.profile.ProfileActivity"
             android:exported="true"
-            android:theme="@style/FarmGenius_NoAppBar" >
+            android:theme="@style/FarmGenius_NoAppBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

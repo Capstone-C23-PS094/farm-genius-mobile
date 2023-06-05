@@ -46,4 +46,7 @@
     <string name="kebijakan_privasi">Kebijakan Privasi</string>
     <string name="tentang_pengembang">Tentang Pengembang</string>
     <string name="keluar">Keluar</string>
+    <string name="desc_pusat_bantuan">Apakah Anda memiliki pertanyaan atau menghadapi masalah tertentu? Tidak perlu khawatir! Pusat Bantuan juga menyediakan akses langsung ke tim dukungan pelanggan yang siap membantu Anda dengan cepat dan efisien. Anda dapat mengajukan pertanyaan Anda atau berbagi masalah Anda melalui formulir atau obrolan langsung, dan kami akan dengan senang hati memberikan solusi terbaik untuk Anda.</string>
+    <string name="kontak_layanan_pelanggan">Kontak Layanan Pelanggan</string>
+    <string name="email_farmgenius">farmgenius@gmail.com</string>
 </resources>

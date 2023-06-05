@@ -96,7 +96,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/lihat_lebih_black_icon"
+        android:background="@drawable/ic_see_more_black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_pengaturan_profil"
         app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
         app:layout_constraintTop_toTopOf="@+id/tv_pengaturan_profil" />
@@ -121,7 +121,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/lihat_lebih_black_icon"
+        android:background="@drawable/ic_see_more_black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_pusat_bantuan"
         app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
         app:layout_constraintTop_toTopOf="@+id/tv_pusat_bantuan" />
@@ -146,7 +146,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/lihat_lebih_black_icon"
+        android:background="@drawable/ic_see_more_black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_syarat_ketentuan"
         app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
         app:layout_constraintTop_toTopOf="@+id/tv_syarat_ketentuan" />
@@ -171,7 +171,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/lihat_lebih_black_icon"
+        android:background="@drawable/ic_see_more_black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_kebijakan_privasi"
         app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
         app:layout_constraintTop_toTopOf="@+id/tv_kebijakan_privasi" />
@@ -196,7 +196,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/lihat_lebih_black_icon"
+        android:background="@drawable/ic_see_more_black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_tentang_pengembang"
         app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
         app:layout_constraintTop_toTopOf="@+id/tv_tentang_pengembang" />
@@ -221,7 +221,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/lihat_lebih_black_icon"
+        android:background="@drawable/ic_see_more_black"
         app:layout_constraintBottom_toBottomOf="@+id/tv_keluar"
         app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
         app:layout_constraintTop_toTopOf="@+id/tv_keluar" />

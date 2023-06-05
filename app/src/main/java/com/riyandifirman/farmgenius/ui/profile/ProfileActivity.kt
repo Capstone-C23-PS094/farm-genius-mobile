@@ -36,10 +36,10 @@ import com.riyandifirman.farmgenius.ui.register.RegisterActivity
             startActivity(intent)
         }
 
-//        helpCentre.setOnClickListener {
-//            val intent = Intent(this@ProfileActivity, ProfileHelpCentreActivity::class.java)
-//            startActivity(intent)
-//        }
+        helpCentre.setOnClickListener {
+            val intent = Intent(this@ProfileActivity, ProfileHelpCentreActivity::class.java)
+            startActivity(intent)
+        }
 //
 //        termsConditions.setOnClickListener {
 //            val intent = Intent(this@ProfileActivity, ProfileTermsConditionsActivity::class.java)
