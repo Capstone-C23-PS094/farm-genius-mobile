@@ -75,4 +75,12 @@
     <string name="cc">Cloud Computing Engineer</string>
     <string name="ml">Machine Learning Engineer</string>
     <string name="md">Mobile Development Engineer</string>
+    <string name="suhu">Suhu Daerah</string>
+    <string name="kelembapan">Tingkat Kelembapan Daerah</string>
+    <string name="luas_tanah">Luas Hektar Tanah</string>
+    <string name="lihat_rekomendasi">Lihat Rekomendasi</string>
+    <string name="suffix_temperature">°C</string>
+    <string name="suffix_humidity">%</string>
+    <string name="suffix_area">Ha</string>
+    <string name="title_rekomendasi">Bingung cari tahu tanaman yang pas untuk dipelihara? Cari tahu disini!</string>
 </resources>
