@@ -26,5 +26,24 @@
     <string name="jumlah_tanaman">20</string>
     <string name="rekomendasi_tanaman">Rekomendasi Tanaman</string>
     <string name="cari">Cari</string>
-
+    <string name="title_rekomendasi_tanam">Rekomendasi Tanam</string>
+    <string name="title_hasil_rekomendasi">Hasil Rekomendasi</string>
+    <string name="title_riwayat_deteksi">Riwayat Deteksi</string>
+    <string name="title_hasil_deteksi">Hasil Deteksi</string>
+    <string name="title_langkah_penanganan">Langkah Penanganan</string>
+    <string name="title_profil">Profil</string>
+    <string name="title_pengaturan_profil">Pengaturan Profil</string>
+    <string name="title_pusat_bantuan">Pusat Bantuan</string>
+    <string name="title_syarat_ketentuan">Syarat Ketentuan</string>
+    <string name="title_kebijakan_privasi">Kebijakan Privasi</string>
+    <string name="title_tentang_pengembang">Tentang Pengembang</string>
+    <string name="title_deteksi_tanaman">Deteksi Tanaman</string>
+    <string name="email_riyandi">riyandifirman@gmail.com</string>
+    <string name="riyandi">Riyandi Firman</string>
+    <string name="pengaturan_profil">Pengaturan Profil</string>
+    <string name="pusat_bantuan">Pusat Bantuan</string>
+    <string name="syarat_ketentuan">Syarat Ketentuan</string>
+    <string name="kebijakan_privasi">Kebijakan Privasi</string>
+    <string name="tentang_pengembang">Tentang Pengembang</string>
+    <string name="keluar">Keluar</string>
 </resources>

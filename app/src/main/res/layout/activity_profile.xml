@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <TextView
+        android:id="@+id/title_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/title_profil"
+        android:textAppearance="@style/title_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_home"
+        app:srcCompat="@drawable/ic_back" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/farmer"
+        app:civ_border_color="@color/green_500"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_home" />
+
+    <TextView
+        android:id="@+id/tv_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/riyandi"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile"
+        app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/email_riyandi"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+
+    <View
+        android:id="@+id/profile_rectangle"
+        android:layout_width="410dp"
+        android:layout_height="280dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/profile_page_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+
+    <TextView
+        android:id="@+id/tv_pengaturan_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/profile_page_menu"
+        android:text="@string/pengaturan_profil"
+        app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/profile_rectangle" />
+
+    <View
+        android:id="@+id/lihat_lebih_profil"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/lihat_lebih_black_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_pengaturan_profil"
+        app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/tv_pengaturan_profil" />
+
+    <TextView
+        android:id="@+id/tv_pusat_bantuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/profile_page_menu"
+        android:text="@string/pusat_bantuan"
+        app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pengaturan_profil" />
+
+    <View
+        android:id="@+id/lihat_lebih_bantuan"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/lihat_lebih_black_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_pusat_bantuan"
+        app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/tv_pusat_bantuan" />
+
+    <TextView
+        android:id="@+id/tv_syarat_ketentuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/profile_page_menu"
+        android:text="@string/syarat_ketentuan"
+        app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pusat_bantuan" />
+
+    <View
+        android:id="@+id/lihat_lebih_sk"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/lihat_lebih_black_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_syarat_ketentuan"
+        app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/tv_syarat_ketentuan" />
+
+    <TextView
+        android:id="@+id/tv_kebijakan_privasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/profile_page_menu"
+        android:text="@string/kebijakan_privasi"
+        app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_syarat_ketentuan" />
+
+    <View
+        android:id="@+id/lihat_lebih_privasi"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/lihat_lebih_black_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_kebijakan_privasi"
+        app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/tv_kebijakan_privasi" />
+
+    <TextView
+        android:id="@+id/tv_tentang_pengembang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/profile_page_menu"
+        android:text="@string/tentang_pengembang"
+        app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kebijakan_privasi" />
+
+    <View
+        android:id="@+id/lihat_lebih_pengembang"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/lihat_lebih_black_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tentang_pengembang"
+        app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/tv_tentang_pengembang" />
+
+    <TextView
+        android:id="@+id/tv_keluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/profile_page_menu"
+        android:text="@string/keluar"
+        app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tentang_pengembang" />
+
+    <View
+        android:id="@+id/lihat_lebih_keluar"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/lihat_lebih_black_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_keluar"
+        app:layout_constraintEnd_toEndOf="@id/profile_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/tv_keluar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

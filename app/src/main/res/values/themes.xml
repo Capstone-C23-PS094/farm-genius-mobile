@@ -78,4 +78,13 @@
         <item name="android:textSize">80sp</item>
         <item name="android:textColor">#7ED957</item>
     </style>
+    <style name="title_page">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="profile_page_menu">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
 </resources>
