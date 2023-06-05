@@ -12,9 +12,13 @@
         android:theme="@style/Theme.FarmGenius"
         tools:targetApi="31">
         <activity
-            android:name=".ui.profile.ProfilePrivacyPolicyActivity"
+            android:name=".ui.profile.ProfileAboutDeveloperActivity"
             android:theme="@style/FarmGenius_NoAppBar"
             android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfilePrivacyPolicyActivity"
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.profile.ProfileTermsConditionsActivity"
             android:exported="false"

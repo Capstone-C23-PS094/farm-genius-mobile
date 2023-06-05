@@ -67,4 +67,12 @@
     <string name="informasi_kumpulkan_teks">a. Informasi Pribadi: Kami dapat mengumpulkan informasi pribadi yang Anda berikan secara sukarela, seperti nama, alamat email, dan informasi profil pengguna.\nb. Informasi Penggunaan: Kami dapat mengumpulkan informasi tentang bagaimana Anda menggunakan FarmGenius, termasuk aktivitas, log masuk, preferensi, dan pengaturan.\nc. Informasi Perangkat: Kami dapat mengumpulkan informasi tentang perangkat yang Anda gunakan untuk mengakses FarmGenius, seperti jenis perangkat, sistem operasi, ID perangkat unik, dan pengaturan perangkat.</string>
     <string name="penggunaan_informasi_teks">a. Kami menggunakan informasi yang dikumpulkan untuk menyediakan, mengoperasikan, dan meningkatkan FarmGenius, serta memberikan dukungan pelanggan yang efektif.\nb. Kami dapat menggunakan informasi untuk mengirimkan pembaruan, pemberitahuan, dan informasi terkait FarmGenius kepada Anda.\nc. Informasi anonim atau agregat dapat digunakan untuk tujuan analisis, penelitian pasar, atau pengembangan produk, dengan tidak mengidentifikasi informasi pribadi individu.</string>
     <string name="bagikan_informasi_teks">a. Kami tidak akan membagikan informasi pribadi Anda kepada pihak ketiga kecuali dengan persetujuan Anda atau jika diperlukan oleh hukum.\nb. Kami dapat menggunakan penyedia layanan pihak ketiga untuk membantu dalam pengoperasian FarmGenius, dan mereka akan memiliki akses terbatas ke informasi Anda hanya untuk tujuan yang diperlukan.</string>
+    <string name="hedrin">Hedrin Sitorus</string>
+    <string name="husada">Husada Hutasoit</string>
+    <string name="iman">Iman Nurohman</string>
+    <string name="reyhan">Reyhan Agus</string>
+    <string name="rolasta">Rolasta Sitorus</string>
+    <string name="cc">Cloud Computing Engineer</string>
+    <string name="ml">Machine Learning Engineer</string>
+    <string name="md">Mobile Development Engineer</string>
 </resources>

@@ -50,11 +50,11 @@ import com.riyandifirman.farmgenius.ui.register.RegisterActivity
             val intent = Intent(this@ProfileActivity, ProfilePrivacyPolicyActivity::class.java)
             startActivity(intent)
         }
-//
-//        aboutDeveloper.setOnClickListener {
-//            val intent = Intent(this@ProfileActivity, ProfileAboutDeveloperActivity::class.java)
-//            startActivity(intent)
-//        }
+
+        aboutDeveloper.setOnClickListener {
+            val intent = Intent(this@ProfileActivity, ProfileAboutDeveloperActivity::class.java)
+            startActivity(intent)
+        }
 //
 //        logout.setOnClickListener {
 //            val intent = Intent(this@ProfileActivity, ProfileLogoutActivity::class.java)
