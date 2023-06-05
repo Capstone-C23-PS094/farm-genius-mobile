@@ -58,4 +58,24 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#7ED957</item>
     </style>
+    <style name="hello_user">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="ringkasan">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="hasil_deteksi">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="ringkasan_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="ringkasan_text_green">
+        <item name="android:textSize">80sp</item>
+        <item name="android:textColor">#7ED957</item>
+    </style>
 </resources>

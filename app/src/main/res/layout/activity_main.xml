@@ -7,12 +7,228 @@
     tools:context=".ui.main.MainActivity">
 
     <TextView
+        android:id="@+id/hello_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="35dp"
+        android:gravity="top"
+        android:text="@string/title"
+        android:textAppearance="@style/hello_user"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangle_profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/profile_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/profile_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/user_filled_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_profile"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_profile"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_profile"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_profile" />
+
+    <View
+        android:id="@+id/summary_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/summary_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hello_user" />
+
+    <TextView
+        android:id="@+id/ringkasan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="1sp"
+        android:text="@string/ringkasan"
+        android:textAppearance="@style/ringkasan"
+        android:textStyle="bold"
+        android:translationY="-0.32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/summary_icon"
+        app:layout_constraintStart_toEndOf="@+id/summary_icon"
+        app:layout_constraintTop_toTopOf="@+id/summary_icon" />
+
+    <View
+        android:id="@+id/card_rectangle"
+        android:layout_width="200dp"
+        android:layout_height="198dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/card_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ringkasan" />
+
+    <TextView
+        android:id="@+id/tv_rekomendasi_tanaman"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/rekomendasi_tanaman"
+        android:textAppearance="@style/ringkasan_text"
+        app:layout_constraintEnd_toEndOf="@+id/card_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/card_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/card_rectangle" />
+
+    <View
+        android:id="@+id/lampu_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/lampu_icon"
+        app:layout_constraintEnd_toEndOf="@+id/card_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/card_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rekomendasi_tanaman" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cari_button"
+        android:layout_width="120dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cari_button"
+        android:text="@string/cari"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/card_rectangle"
+        app:layout_constraintStart_toStartOf="@+id/card_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/lampu_icon" />
+
+    <View
+        android:id="@+id/card_rectangle2"
+        android:layout_width="200dp"
+        android:layout_height="198dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/card_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ringkasan" />
+
+    <TextView
+        android:id="@+id/tv_tanaman"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/tanaman"
+        android:textAppearance="@style/ringkasan_text"
+        app:layout_constraintEnd_toEndOf="@+id/card_rectangle2"
+        app:layout_constraintStart_toStartOf="@+id/card_rectangle2"
+        app:layout_constraintTop_toTopOf="@+id/card_rectangle2" />
+
+    <TextView
+        android:id="@+id/jumlah_terdeteksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
+        android:text="@string/jumlah_tanaman"
+        android:textAppearance="@style/ringkasan_text_green"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/card_rectangle2"
+        app:layout_constraintStart_toStartOf="@+id/card_rectangle2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tanaman" />
+
+    <View
+        android:id="@+id/flower_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/flower_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_rectangle" />
+
+    <TextView
+        android:id="@+id/hasil_deteksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="1sp"
+        android:text="@string/hasil_deteksi"
+        android:textAppearance="@style/hasil_deteksi"
+        android:textStyle="bold"
+        android:translationY="-0.32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/flower_icon"
+        app:layout_constraintStart_toEndOf="@+id/flower_icon"
+        app:layout_constraintTop_toTopOf="@+id/flower_icon" />
+
+    <View
+        android:id="@+id/lihat_lebih"
+        android:layout_width="11dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/lihat_lebih_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/hasil_deteksi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hasil_deteksi" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_deteksi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/hasil_deteksi" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="28dp"
+        android:src="@drawable/deteksi_icon"
+        android:backgroundTint="@color/green_500"
+        app:tint="@color/white"
+        app:fabCustomSize="80dp"
+        app:maxImageSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,4 +17,14 @@
     <string name="email">Email</string>
     <string name="nama">Nama</string>
     <string name="password">Password</string>
+    <string name="title">Halo, User!</string>
+    <string name="ringkasan">Ringkasan</string>
+    <string name="hasil_deteksi">Hasil Deteksi</string>
+    <string name="gejala_deteksi">Gejala Bintik Daun Bakteri</string>
+    <string name="waktu_deteksi">22 Mei 2023, 9.30</string>
+    <string name="tanaman">Tanaman Terdeteksi</string>
+    <string name="jumlah_tanaman">20</string>
+    <string name="rekomendasi_tanaman">Rekomendasi Tanaman</string>
+    <string name="cari">Cari</string>
+
 </resources>
