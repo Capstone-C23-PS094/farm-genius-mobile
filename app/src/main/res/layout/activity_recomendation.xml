@@ -35,7 +35,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="28dp"
         android:textSize="18sp"
-        android:textStyle="bold"
         android:textColor="@color/black"
         android:text="@string/title_rekomendasi"
         android:justificationMode="inter_word"
@@ -116,7 +115,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cari_button"
+        android:id="@+id/recomendation_button"
         android:layout_width="296dp"
         android:layout_height="41dp"
         android:layout_marginTop="32dp"

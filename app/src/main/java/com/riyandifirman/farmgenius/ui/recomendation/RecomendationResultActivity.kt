@@ -6,21 +6,21 @@ import android.os.Bundle
 import android.widget.ImageView
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityRecomendationBinding
-import com.riyandifirman.farmgenius.ui.profile.ProfileAboutDeveloperActivity
+import com.riyandifirman.farmgenius.databinding.ActivityRecomendationResultBinding
 
-class RecomendationActivity : AppCompatActivity() {
+class RecomendationResultActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRecomendationBinding
+    private lateinit var binding: ActivityRecomendationResultBinding
     private lateinit var backButton: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRecomendationBinding.inflate(layoutInflater)
+        binding = ActivityRecomendationResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val recomendationButton = binding.recomendationButton
-        recomendationButton.setOnClickListener {
-            val intent = Intent(this@RecomendationActivity, RecomendationResultActivity::class.java)
+        backButton = binding.backButton
+        backButton.setOnClickListener {
+            val intent = Intent(this@RecomendationResultActivity, RecomendationActivity::class.java)
             startActivity(intent)
         }
     }

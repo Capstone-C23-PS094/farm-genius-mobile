@@ -61,8 +61,4 @@ import com.riyandifirman.farmgenius.ui.register.RegisterActivity
 //            startActivity(intent)
 //        }
     }
-
-     override fun onBackPressed() {
-         finishAffinity()
-     }
 }
