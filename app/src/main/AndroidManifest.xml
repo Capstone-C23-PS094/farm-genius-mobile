@@ -12,6 +12,10 @@
         android:theme="@style/Theme.FarmGenius"
         tools:targetApi="31">
         <activity
+            android:name=".ui.history.HistoryTreatmentActivity"
+            android:theme="@style/FarmGenius_NoAppBar"
+            android:exported="false" />
+        <activity
             android:name=".ui.history.HistoryResultDetectionActivity"
             android:exported="true"
             android:theme="@style/FarmGenius_NoAppBar">
@@ -24,7 +28,7 @@
         <activity
             android:name=".ui.history.HistoryActivity"
             android:exported="false"
-            android:theme="@style/FarmGenius_NoAppBar"/>
+            android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.recomendation.RecomendationResultActivity"
             android:exported="false"

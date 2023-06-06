@@ -88,4 +88,6 @@
     <string name="result_date">22 Mei 2023, 14:30</string>
     <string name="result_descrption">"Gejala bercak daun bakteri meliputi munculnya lesi bermata hitam, bintik-bintik cokelat dengan lingkaran cahaya kuning, atau hanya area terang dan gelap pada dedaunan. Bercak-bercak ini tidak beraturan dan berukuran antara 3/16 dan inci (lima milimeter hingga satu sentimeter). Bercak ini dapat terjadi pada bagian atas atau bawah daun dan membunuh bagian jaringan ketika berkumpul bersama. "</string>
     <string name="lihat_cara_penanganan">Lihat Cara Penanganan</string>
+    <string name="result_treatment">1. Sanitasi kebun\n2. Mengurangi kelembaban\n3. Daun-daun bawah yang terinfeksi secepatnya diambil agar tidak menjadi sumber penularan\n4. Pemanenan tepat waktu\n5. Eradikasi tanaman yang sakit\n6. Penyemprotan dengan fungisida berbahan aktif Mancozeb, Captan, Captafol, Metil tiofanat, Benomil , Antracol</string>
+    <string name="beranda">Beranda</string>
 </resources>
