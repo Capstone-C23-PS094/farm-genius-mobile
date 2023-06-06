@@ -12,11 +12,7 @@
         android:theme="@style/Theme.FarmGenius"
         tools:targetApi="31">
         <activity
-            android:name=".ui.history.HistoryTreatmentActivity"
-            android:theme="@style/FarmGenius_NoAppBar"
-            android:exported="false" />
-        <activity
-            android:name=".ui.history.HistoryResultDetectionActivity"
+            android:name=".ui.detection.DetectionActivity"
             android:exported="true"
             android:theme="@style/FarmGenius_NoAppBar">
             <intent-filter>
@@ -25,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.history.HistoryTreatmentActivity"
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar" />
+        <activity
+            android:name=".ui.history.HistoryResultDetectionActivity"
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar"/>
         <activity
             android:name=".ui.history.HistoryActivity"
             android:exported="false"
