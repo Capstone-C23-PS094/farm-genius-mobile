@@ -12,15 +12,19 @@
         android:theme="@style/Theme.FarmGenius"
         tools:targetApi="31">
         <activity
-            android:name=".ui.history.HistoryActivity"
+            android:name=".ui.history.HistoryResultDetectionActivity"
             android:exported="true"
             android:theme="@style/FarmGenius_NoAppBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.history.HistoryActivity"
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar"/>
         <activity
             android:name=".ui.recomendation.RecomendationResultActivity"
             android:exported="false"
@@ -28,7 +32,7 @@
         <activity
             android:name=".ui.recomendation.RecomendationActivity"
             android:exported="false"
-            android:theme="@style/FarmGenius_NoAppBar"/>
+            android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.profile.ProfileAboutDeveloperActivity"
             android:exported="false"
