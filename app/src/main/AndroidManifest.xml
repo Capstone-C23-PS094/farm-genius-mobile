@@ -12,9 +12,12 @@
         android:theme="@style/Theme.FarmGenius"
         tools:targetApi="31">
         <activity
-            android:name=".ui.detection.DetectionResultActivity"
-            android:theme="@style/FarmGenius_NoAppBar"
+            android:name=".DetectionTreatmentActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.detection.DetectionResultActivity"
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.detection.DetectionActivity"
             android:exported="true"

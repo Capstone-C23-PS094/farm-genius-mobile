@@ -4,18 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.detection.DetectionResultActivity">
+    tools:context=".ui.detection.DetectionTreatmentActivity">
 
     <TextView
         android:id="@+id/title_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/title_hasil_deteksi"
+        android:text="@string/title_langkah_penanganan"
         android:textAppearance="@style/title_page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_page"
+        app:srcCompat="@drawable/ic_back" />
 
     <TextView
         android:id="@+id/tv_result_title"
@@ -30,18 +40,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_page" />
 
-    <ImageView
-        android:id="@+id/iv_result_image"
-        android:layout_width="265dp"
-        android:layout_height="177dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_result_title"
-        app:srcCompat="@drawable/result_image" />
 
     <TextView
-        android:id="@+id/tv_result_description"
+        android:id="@+id/tv_result_treatment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
@@ -50,31 +51,17 @@
         android:textSize="16sp"
         android:lineSpacingExtra="2sp"
         android:textColor="@color/black"
-        android:justificationMode="inter_word"
-        android:text="@string/result_descrption"
+        android:text="@string/result_treatment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_result_image" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_title" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/treatment_button"
-        android:layout_width="400dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/button_detection_result_page"
-        android:text="@string/lihat_cara_penanganan"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/home_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/home_button"
+        android:id="@+id/homepage_button"
         android:layout_width="400dp"
         android:layout_height="41dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/button_homepage"
+        android:background="@drawable/button_detection_result_page"
         android:text="@string/beranda"
         android:textColor="@color/white"
         android:textSize="16sp"
