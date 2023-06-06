@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityRecomendationBinding
+import com.riyandifirman.farmgenius.ui.main.MainActivity
 import com.riyandifirman.farmgenius.ui.profile.ProfileAboutDeveloperActivity
 
 class RecomendationActivity : AppCompatActivity() {
@@ -17,6 +18,13 @@ class RecomendationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRecomendationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Tombol kembali di klik
+        backButton = binding.backButton
+        backButton.setOnClickListener {
+            val intent = Intent(this@RecomendationActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val recomendationButton = binding.recomendationButton
         recomendationButton.setOnClickListener {

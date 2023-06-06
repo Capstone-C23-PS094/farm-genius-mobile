@@ -4,13 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityProfileBinding
+import com.riyandifirman.farmgenius.ui.main.MainActivity
 import com.riyandifirman.farmgenius.ui.register.RegisterActivity
 
  class ProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileBinding
+    private lateinit var backButton: ImageView
     private lateinit var settingProfile: View
     private lateinit var helpCentre: View
     private lateinit var termsConditions: View
@@ -22,6 +25,13 @@ import com.riyandifirman.farmgenius.ui.register.RegisterActivity
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Tombol kembali di klik
+        backButton = binding.backButton
+        backButton.setOnClickListener {
+            val intent = Intent(this@ProfileActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         settingProfile = binding.lihatLebihProfil
         helpCentre = binding.lihatLebihBantuan

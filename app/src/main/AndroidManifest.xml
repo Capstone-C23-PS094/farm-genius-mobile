@@ -21,14 +21,8 @@
             android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.detection.DetectionActivity"
-            android:exported="true"
-            android:theme="@style/FarmGenius_NoAppBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar"/>
         <activity
             android:name=".ui.history.HistoryTreatmentActivity"
             android:exported="false"
@@ -87,8 +81,14 @@
             android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.main.MainActivity"
-            android:exported="false"
-            android:theme="@style/FarmGenius_NoAppBar" />
+            android:exported="true"
+            android:theme="@style/FarmGenius_NoAppBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
