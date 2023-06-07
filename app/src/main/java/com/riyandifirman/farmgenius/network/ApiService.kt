@@ -21,6 +21,7 @@ interface ApiService {
 
     // fungsi untuk mengirimkan data saat login
     @POST("login")
+    @FormUrlEncoded
     fun loginUser(
         @Field("email") email: String,
         @Field("password") password: String

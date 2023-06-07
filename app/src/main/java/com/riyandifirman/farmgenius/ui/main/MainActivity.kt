@@ -3,6 +3,7 @@ package com.riyandifirman.farmgenius.ui.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityMainBinding
 import com.riyandifirman.farmgenius.ui.detection.DetectionActivity

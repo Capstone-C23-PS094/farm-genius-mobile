@@ -6,7 +6,7 @@ import android.content.SharedPreferences
 class Preferences(context: Context) {
     val login = "login"
     val myPref = "myPref"
-    val myToken = "Bearer"
+    val myToken = ""
     val myPreferences: SharedPreferences
 
     init {
