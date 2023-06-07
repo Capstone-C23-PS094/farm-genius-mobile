@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityProfileBinding
+import com.riyandifirman.farmgenius.ui.login.LoginActivity
 import com.riyandifirman.farmgenius.ui.main.MainActivity
 import com.riyandifirman.farmgenius.ui.register.RegisterActivity
+import com.riyandifirman.farmgenius.util.Preferences
 
  class ProfileActivity : AppCompatActivity() {
 
@@ -20,6 +23,7 @@ import com.riyandifirman.farmgenius.ui.register.RegisterActivity
     private lateinit var privacyPolicy: View
     private lateinit var aboutDeveloper: View
     private lateinit var logout: View
+    private lateinit var myPreferences : Preferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,8 @@ import com.riyandifirman.farmgenius.ui.register.RegisterActivity
             val intent = Intent(this@ProfileActivity, MainActivity::class.java)
             startActivity(intent)
         }
+
+        myPreferences = Preferences(this)
 
         settingProfile = binding.lihatLebihProfil
         helpCentre = binding.lihatLebihBantuan
@@ -65,10 +71,26 @@ import com.riyandifirman.farmgenius.ui.register.RegisterActivity
             val intent = Intent(this@ProfileActivity, ProfileAboutDeveloperActivity::class.java)
             startActivity(intent)
         }
-//
-//        logout.setOnClickListener {
-//            val intent = Intent(this@ProfileActivity, ProfileLogoutActivity::class.java)
-//            startActivity(intent)
-//        }
+
+        logout.setOnClickListener {
+            val alertDialogBuilder = AlertDialog.Builder(this)
+            with(alertDialogBuilder) {
+                setTitle("Keluar")
+                setMessage("Apakah anda yakin ingin keluar?")
+                setPositiveButton("Ya") { dialog, which ->
+                    myPreferences.clearUserToken()
+                    myPreferences.clearUserLogin()
+                    myPreferences.setStatusLogin(false)
+                    val intent = Intent(this@ProfileActivity, LoginActivity::class.java)
+                    startActivity(intent)
+                    finishAffinity()
+                }
+                setNegativeButton("Tidak") { dialog, which ->
+                    dialog.cancel()
+                }
+                val alertDialog = alertDialogBuilder.create()
+                alertDialog.show()
+            }
+        }
     }
 }
