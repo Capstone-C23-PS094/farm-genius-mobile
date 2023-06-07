@@ -97,4 +97,5 @@
     <string name="deteksi">Deteksi</string>
     <string name="galeri">Galeri</string>
     <string name="kamera">Kamera</string>
+    <string name="helper_password">Terdiri dari minimal 1 huruf besar dan angka (minimal 8 karakter)</string>
 </resources>

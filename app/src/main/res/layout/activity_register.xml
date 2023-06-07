@@ -54,6 +54,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextNama"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -77,6 +78,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextEmail"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -90,6 +92,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
         android:hint="@string/password"
+        app:helperTextEnabled="true"
+        app:helperText="@string/helper_password"
+        app:helperTextTextColor="#EE4B2B"
         app:endIconMode="password_toggle"
         app:endIconTint="#7ED957"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,20 +104,21 @@
         app:startIconTint="#7ED957">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.riyandifirman.farmgenius.customview.RegisterButton
         android:id="@+id/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
-        android:background="@drawable/register_button"
-        android:text="@string/daftar_button"
         android:textColor="@color/white"
         android:textStyle="bold"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
