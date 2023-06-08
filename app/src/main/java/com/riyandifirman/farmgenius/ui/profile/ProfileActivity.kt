@@ -68,6 +68,7 @@ import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
         }
 
         // Tombol > di klik
+        // Launcher untuk pindah ke activity setting profile
         val settingProfileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 viewModel.init(this)
@@ -78,6 +79,7 @@ import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
             settingProfileLauncher.launch(intent)
         }
 
+        // Launcher untuk pindah ke activity help centre
         val helpCentreLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 viewModel.init(this)
@@ -88,6 +90,7 @@ import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
             helpCentreLauncher.launch(intent)
         }
 
+        // Launcher untuk pindah ke activity terms and conditions
         val termsConditionsLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 viewModel.init(this)
@@ -98,6 +101,7 @@ import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
             termsConditionsLauncher.launch(intent)
         }
 
+        // Launcher untuk pindah ke activity privacy policy
         val privacyPolicyLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 viewModel.init(this)
@@ -108,6 +112,7 @@ import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
             privacyPolicyLauncher.launch(intent)
         }
 
+        // Launcher untuk pindah ke activity about developer
         val aboutDeveloperLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             if (it.resultCode == RESULT_OK) {
                 viewModel.init(this)
