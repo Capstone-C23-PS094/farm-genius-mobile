@@ -40,6 +40,7 @@ class LoginViewModel: ViewModel() {
                 if (body != null) {
                     myPreferences.saveUserToken(body.accessToken)
                     myPreferences.setStatusLogin(true)
+                    myPreferences.saveUserData(body.userId, body.name, body.email)
                     Toast.makeText(context, "Login Success", Toast.LENGTH_SHORT).show()
                     val intent = Intent(context, MainActivity::class.java)
                     context.startActivity(intent)

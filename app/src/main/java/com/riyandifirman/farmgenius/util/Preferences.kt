@@ -6,7 +6,7 @@ import android.content.SharedPreferences
 class Preferences(context: Context) {
     val login = "login"
     val myPref = "myPref"
-    val myToken = ""
+    val myToken = "userToken"
     val myPreferences: SharedPreferences
 
     init {
@@ -41,5 +41,27 @@ class Preferences(context: Context) {
     // fungsi untuk menghapus data login
     fun clearUserLogin() {
         myPreferences.edit().remove(login).apply()
+    }
+
+    // fungsi untuk menyimpan semua data user
+    fun saveUserData(userId: String, userName: String, userEmail: String) {
+        myPreferences.edit().putString("userId", userId).apply()
+        myPreferences.edit().putString("userName", userName).apply()
+        myPreferences.edit().putString("userEmail", userEmail).apply()
+    }
+
+    // fungsi untuk mendapatkan data user id
+    fun getUserId(): String? {
+        return myPreferences.getString("userId", " ")
+    }
+
+    // fungsi untuk mendapatkan data user name
+    fun getUserName(): String? {
+        return myPreferences.getString("userName", " ")
+    }
+
+    // fungsi untuk mendapatkan data user email
+    fun getUserEmail(): String? {
+        return myPreferences.getString("userEmail", " ")
     }
 }
