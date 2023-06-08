@@ -19,8 +19,9 @@ class ProfilePrivacyPolicyActivity : AppCompatActivity() {
 
         backButton = binding.backButton
         backButton.setOnClickListener {
-            val intent = Intent(this@ProfilePrivacyPolicyActivity, ProfileActivity::class.java)
-            startActivity(intent)
+            val resultIntent = Intent()
+            setResult(RESULT_OK, resultIntent)
+            finish()
         }
     }
 }

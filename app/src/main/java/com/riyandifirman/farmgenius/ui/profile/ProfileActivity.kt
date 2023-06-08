@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.riyandifirman.farmgenius.R
@@ -67,29 +68,54 @@ import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
         }
 
         // Tombol > di klik
+        val settingProfileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                viewModel.init(this)
+            }
+        }
         settingProfile.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileSettingActivity::class.java)
-            startActivity(intent)
+            settingProfileLauncher.launch(intent)
         }
 
+        val helpCentreLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                viewModel.init(this)
+            }
+        }
         helpCentre.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileHelpCentreActivity::class.java)
-            startActivity(intent)
+            helpCentreLauncher.launch(intent)
         }
 
+        val termsConditionsLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                viewModel.init(this)
+            }
+        }
         termsConditions.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileTermsConditionsActivity::class.java)
-            startActivity(intent)
+            termsConditionsLauncher.launch(intent)
         }
 
+        val privacyPolicyLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                viewModel.init(this)
+            }
+        }
         privacyPolicy.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfilePrivacyPolicyActivity::class.java)
-            startActivity(intent)
+            privacyPolicyLauncher.launch(intent)
         }
 
+        val aboutDeveloperLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                viewModel.init(this)
+            }
+        }
         aboutDeveloper.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileAboutDeveloperActivity::class.java)
-            startActivity(intent)
+            aboutDeveloperLauncher.launch(intent)
         }
 
         logout.setOnClickListener {

@@ -21,8 +21,9 @@ class ProfileSettingActivity : AppCompatActivity() {
 
         // Ketika tombol back di klik
         backButton.setOnClickListener {
-            val intent = Intent(this@ProfileSettingActivity, ProfileActivity::class.java)
-            startActivity(intent)
+            val resultIntent = Intent()
+            setResult(RESULT_OK, resultIntent)
+            finish()
         }
     }
 }

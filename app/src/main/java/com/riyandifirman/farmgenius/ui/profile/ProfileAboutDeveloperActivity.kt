@@ -19,8 +19,9 @@ class ProfileAboutDeveloperActivity : AppCompatActivity() {
 
         backButton = binding.backButton
         backButton.setOnClickListener {
-            val intent = Intent(this@ProfileAboutDeveloperActivity, ProfileActivity::class.java)
-            startActivity(intent)
+            val resultIntent = Intent()
+            setResult(RESULT_OK, resultIntent)
+            finish()
         }
     }
 }
