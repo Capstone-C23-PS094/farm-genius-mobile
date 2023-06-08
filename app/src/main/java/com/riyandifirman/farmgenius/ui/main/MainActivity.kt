@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.d("CEK_DATA", "")
-
         helloName = binding.helloUser
 
         // Inisialisasi ViewModel

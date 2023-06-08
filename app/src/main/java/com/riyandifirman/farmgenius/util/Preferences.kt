@@ -50,6 +50,13 @@ class Preferences(context: Context) {
         myPreferences.edit().putString("userEmail", userEmail).apply()
     }
 
+    // fungsi untuk menghapus semua data user
+    fun clearUserData() {
+        myPreferences.edit().remove("userId").apply()
+        myPreferences.edit().remove("userName").apply()
+        myPreferences.edit().remove("userEmail").apply()
+    }
+
     // fungsi untuk mendapatkan data user id
     fun getUserId(): String? {
         return myPreferences.getString("userId", " ")
