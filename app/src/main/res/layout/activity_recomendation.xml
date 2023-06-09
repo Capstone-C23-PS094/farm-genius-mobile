@@ -63,6 +63,7 @@
             android:id="@+id/editTextTemperature"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:maxLength="2"
             android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,6 +76,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
         android:hint="@string/kelembapan"
+        app:helperTextEnabled="true"
+        app:helperText="@string/skala_kelembapan"
+        app:helperTextTextColor="#7ED957"
         app:suffixText="@string/suffix_humidity"
         app:endIconTint="#7ED957"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,6 +91,7 @@
             android:id="@+id/editTextHumidity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:maxLength="3"
             android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,19 +115,19 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextHectare"
             android:layout_width="match_parent"
+            android:maxLength="10"
             android:layout_height="match_parent"
             android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.riyandifirman.farmgenius.customview.RecomendationButton
         android:id="@+id/recomendation_button"
-        android:layout_width="296dp"
-        android:layout_height="41dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/button_see_recomendation"
-        android:text="@string/lihat_rekomendasi"
         android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textSize="16sp"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHectare" />
