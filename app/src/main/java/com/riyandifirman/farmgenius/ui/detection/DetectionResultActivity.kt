@@ -29,4 +29,9 @@ class DetectionResultActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onBackPressed() {
+        val intent = Intent(this@DetectionResultActivity, MainActivity::class.java)
+        startActivity(intent)
+    }
 }

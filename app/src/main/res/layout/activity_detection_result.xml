@@ -32,13 +32,13 @@
 
     <ImageView
         android:id="@+id/iv_result_image"
-        android:layout_width="265dp"
-        android:layout_height="177dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_result_title"
-        app:srcCompat="@drawable/result_image" />
+        app:srcCompat="@drawable/ic_picture" />
 
     <TextView
         android:id="@+id/tv_result_description"
@@ -58,7 +58,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/treatment_button"
-        android:layout_width="400dp"
+        android:layout_width="340dp"
         android:layout_height="41dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/button_detection_result_page"
@@ -71,7 +71,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/home_button"
-        android:layout_width="400dp"
+        android:layout_width="340dp"
         android:layout_height="41dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_homepage"
