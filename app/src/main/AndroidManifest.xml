@@ -4,6 +4,24 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,9 +32,12 @@
         android:theme="@style/Theme.FarmGenius"
         tools:targetApi="31">
         <activity
-            android:name=".ui.detection.DetectionTreatmentActivity"
-            android:theme="@style/FarmGenius_NoAppBar"
+            android:name=".ui.detection.CameraActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.detection.DetectionTreatmentActivity"
+            android:exported="false"
+            android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.detection.DetectionResultActivity"
             android:exported="false"
@@ -24,7 +45,7 @@
         <activity
             android:name=".ui.detection.DetectionActivity"
             android:exported="false"
-            android:theme="@style/FarmGenius_NoAppBar"/>
+            android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.history.HistoryTreatmentActivity"
             android:exported="false"
@@ -72,11 +93,11 @@
         <activity
             android:name=".ui.register.RegisterActivity"
             android:exported="false"
-            android:theme="@style/FarmGenius_NoAppBar"/>
+            android:theme="@style/FarmGenius_NoAppBar" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true"
-            android:theme="@style/FarmGenius_NoAppBar" >
+            android:theme="@style/FarmGenius_NoAppBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -90,7 +111,17 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="false"
-            android:theme="@style/FarmGenius_NoAppBar"/>
+            android:theme="@style/FarmGenius_NoAppBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.riyandifirman.farmgenius"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

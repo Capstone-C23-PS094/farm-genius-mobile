@@ -7,11 +7,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.AppCompatButton
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityRecomendationBinding
 import com.riyandifirman.farmgenius.ui.main.MainActivity
 import com.riyandifirman.farmgenius.ui.profile.ProfileAboutDeveloperActivity
+import com.riyandifirman.farmgenius.ui.profile.ProfileSettingActivity
 
 class RecomendationActivity : AppCompatActivity() {
 
@@ -87,10 +89,16 @@ class RecomendationActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         val recomendationButton = binding.recomendationButton
+        val recomendationResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                // TODO: Tambahkan proses untuk menerima data dari RecomendationResultActivity
+            }
+        }
         recomendationButton.setOnClickListener {
             val intent = Intent(this@RecomendationActivity, RecomendationResultActivity::class.java)
-            startActivity(intent)
+            recomendationResultLauncher.launch(intent)
         }
     }
 
