@@ -23,7 +23,7 @@ class ApiConfig {
 
             // membuat retrofit baru dengan client yang sudah dibuat dan base url dicoding api
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://farmgenius-ccd7d.et.r.appspot.com/")
+                .baseUrl("https://farm-genius.et.r.appspot.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
