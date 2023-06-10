@@ -17,7 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityDetectionBinding
 import com.riyandifirman.farmgenius.ui.main.MainActivity
-import com.riyandifirman.farmgenius.util.rotateFile
+//import com.riyandifirman.farmgenius.util.rotateFile
 import com.riyandifirman.farmgenius.util.uriToFile
 import com.riyandifirman.farmgenius.viewmodel.MainViewModel
 import java.io.File
@@ -119,7 +119,7 @@ class DetectionActivity : AppCompatActivity() {
             val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
 
             myFile?.let { file ->
-                rotateFile(file, isBackCamera)
+//                rotateFile(file, isBackCamera)
                 getFile = file
                 binding.ivResultImage.setImageBitmap(BitmapFactory.decodeFile(file.path))
             }

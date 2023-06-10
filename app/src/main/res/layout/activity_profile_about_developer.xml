@@ -252,13 +252,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="32dp"
             android:text="@string/cc"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/iv_profile_6"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nama_6"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama_6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
