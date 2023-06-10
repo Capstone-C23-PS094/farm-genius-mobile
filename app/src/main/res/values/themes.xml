@@ -75,7 +75,7 @@
         <item name="android:textColor">#000000</item>
     </style>
     <style name="ringkasan_text_green">
-        <item name="android:textSize">80sp</item>
+        <item name="android:textSize">100sp</item>
         <item name="android:textColor">#7ED957</item>
     </style>
     <style name="title_page">
@@ -84,7 +84,7 @@
         <item name="android:textStyle">bold</item>
     </style>
     <style name="profile_page_menu">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">#000000</item>
     </style>
     <style name="tc_page">

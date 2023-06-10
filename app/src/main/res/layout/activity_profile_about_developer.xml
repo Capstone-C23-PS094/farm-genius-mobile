@@ -225,9 +225,11 @@
             android:layout_height="100dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
             android:src="@drawable/pp_rolasta"
             app:civ_border_color="@color/green_500"
             app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_profile_5" />
 

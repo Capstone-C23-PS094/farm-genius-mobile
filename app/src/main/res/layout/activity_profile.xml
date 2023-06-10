@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="@string/riyandi"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -66,8 +66,8 @@
 
     <View
         android:id="@+id/profile_rectangle"
-        android:layout_width="410dp"
-        android:layout_height="280dp"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="32dp"
@@ -81,9 +81,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/profile_page_menu"
+        android:layout_marginTop="24dp"
         android:text="@string/pengaturan_profil"
+        android:textAppearance="@style/profile_page_menu"
         app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
         app:layout_constraintTop_toTopOf="@+id/profile_rectangle" />
 
@@ -106,9 +106,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/profile_page_menu"
+        android:layout_marginTop="24dp"
         android:text="@string/pusat_bantuan"
+        android:textAppearance="@style/profile_page_menu"
         app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/tv_pengaturan_profil" />
 
@@ -131,9 +131,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/profile_page_menu"
+        android:layout_marginTop="24dp"
         android:text="@string/syarat_ketentuan"
+        android:textAppearance="@style/profile_page_menu"
         app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/tv_pusat_bantuan" />
 
@@ -156,9 +156,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/profile_page_menu"
+        android:layout_marginTop="24dp"
         android:text="@string/kebijakan_privasi"
+        android:textAppearance="@style/profile_page_menu"
         app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/tv_syarat_ketentuan" />
 
@@ -181,9 +181,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/profile_page_menu"
+        android:layout_marginTop="24dp"
         android:text="@string/tentang_pengembang"
+        android:textAppearance="@style/profile_page_menu"
         app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/tv_kebijakan_privasi" />
 
@@ -206,9 +206,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textAppearance="@style/profile_page_menu"
+        android:layout_marginTop="24dp"
         android:text="@string/keluar"
+        android:textAppearance="@style/profile_page_menu"
         app:layout_constraintStart_toStartOf="@+id/profile_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/tv_tentang_pengembang" />
 

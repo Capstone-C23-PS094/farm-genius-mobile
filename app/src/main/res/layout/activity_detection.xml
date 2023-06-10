@@ -52,7 +52,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/gallery_button"
-        android:layout_width="193dp"
+        android:layout_width="160dp"
         android:layout_height="41dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
@@ -68,7 +68,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/camera_button"
-        android:layout_width="193dp"
+        android:layout_width="160dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="28dp"
@@ -84,7 +84,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/detection_button"
-        android:layout_width="400dp"
+        android:layout_width="340dp"
         android:layout_height="41dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_detection_result_page"
