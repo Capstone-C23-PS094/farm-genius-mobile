@@ -3,7 +3,9 @@ package com.riyandifirman.farmgenius.ui.detection
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -15,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityDetectionBinding
 import com.riyandifirman.farmgenius.ui.main.MainActivity
+import com.riyandifirman.farmgenius.util.rotateFile
 import com.riyandifirman.farmgenius.util.uriToFile
 import com.riyandifirman.farmgenius.viewmodel.MainViewModel
 import java.io.File
@@ -73,7 +76,7 @@ class DetectionActivity : AppCompatActivity() {
 
         // Tombol kamera di klik
         camera.setOnClickListener {
-//            openCamera()
+            openCamera()
         }
 
         // Tombol deteksi di klik
@@ -101,6 +104,31 @@ class DetectionActivity : AppCompatActivity() {
         intent.type = "image/*"
         val chooser = Intent.createChooser(intent, "Pilih gambar")
         launcherIntentGallery.launch(chooser)
+    }
+
+    // fungsi untuk menangani hasil dari pemanggilan kamera
+    private val launcherIntentCamera = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        if (it.resultCode == CAMERA_X_RESULT ) {
+            val myFile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU ) {
+                it.data?.getSerializableExtra("picture", File::class.java)
+            } else {
+                @Suppress("DEPRECATION")
+                it.data?.getSerializableExtra("picture")
+            } as? File
+
+            val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
+
+            myFile?.let { file ->
+                rotateFile(file, isBackCamera)
+                getFile = file
+                binding.ivResultImage.setImageBitmap(BitmapFactory.decodeFile(file.path))
+            }
+        }
+    }
+
+    private fun openCamera() {
+        val intent = Intent(this, CameraActivity::class.java)
+        launcherIntentCamera.launch(intent)
     }
 
     // companion object untuk menyimpan properti dan konstanta yang digunakan di activity ini
