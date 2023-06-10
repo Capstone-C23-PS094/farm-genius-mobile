@@ -26,6 +26,7 @@ class DetectionActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityDetectionBinding
     private lateinit var backButton : ImageView
+    private var counter = 0
     private lateinit var currentPhotoPath: String
     private var getFile: File? = null
 
@@ -72,18 +73,32 @@ class DetectionActivity : AppCompatActivity() {
         // Tombol galeri di klik
         galleryButton.setOnClickListener {
             openGallery()
+            counter = 1
+            setMyButtonEnable()
         }
 
         // Tombol kamera di klik
         camera.setOnClickListener {
             openCamera()
+            counter = 1
+            setMyButtonEnable()
         }
 
         // Tombol deteksi di klik
         val detectButton = binding.detectionButton
         detectButton.setOnClickListener {
+            val intent = Intent(this@DetectionActivity, DetectionResultActivity::class.java)
+            startActivity(intent)
 //            detect()
         }
+
+        setMyButtonEnable()
+    }
+
+    // fungsi untuk mengatur tombol deteksi
+    private fun setMyButtonEnable() {
+        val isEnable = counter == 1
+        binding.detectionButton.isEnabled = isEnable
     }
 
     // fungsi untuk menangani hasil dari pemilihan gambar dari galeri
