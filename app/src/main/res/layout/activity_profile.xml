@@ -67,7 +67,7 @@
     <View
         android:id="@+id/profile_rectangle"
         android:layout_width="320dp"
-        android:layout_height="300dp"
+        android:layout_height="330dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="32dp"
