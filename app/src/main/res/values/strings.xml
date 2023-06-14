@@ -80,7 +80,11 @@
     <string name="luas_tanah">Luas Hektar Tanah </string>
     <string name="suhu2">Suhu Daerah : </string>
     <string name="kelembapan2">Tingkat Kelembapan Daerah : </string>
-    <string name="luas_tanah2">Luas Hektar Tanah : </string>
+    <string name="ph_tanah">pH Tanah : </string>
+    <string name="curah_hujan">Curah Hujan : </string>
+    <string name="nitrogen">Nitrogen Tanah : </string>
+    <string name="fosfor">Fosfor Tanah : </string>
+    <string name="kalium">Kalium Tanah : </string>
     <string name="lihat_rekomendasi">Lihat Rekomendasi</string>
     <string name="suffix_temperature">°C</string>
     <string name="suffix_humidity">%</string>
@@ -109,4 +113,5 @@
     <string name="suffix_input_kalium">ppm</string>
     <string name="suffix_input_ph">pH</string>
     <string name="suffix_input_curah">mm</string>
+    <string name="result_recomendation">Tanaman yang direkomendasikan</string>
 </resources>
