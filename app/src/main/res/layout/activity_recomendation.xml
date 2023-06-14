@@ -1,135 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.recomendation.RecomendationActivity">
 
-    <TextView
-        android:id="@+id/title_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/title_rekomendasi_tanam"
-        android:textAppearance="@style/title_page"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        app:layout_constraintBottom_toBottomOf="@+id/title_page"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/title_page"
-        app:srcCompat="@drawable/ic_back" />
-
-    <TextView
-        android:id="@+id/tv_recomendation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="28dp"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:text="@string/title_rekomendasi"
-        android:justificationMode="inter_word"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_page" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutTemperature"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="28dp"
-        android:hint="@string/suhu"
-        app:suffixText="@string/suffix_temperature"
-        app:endIconTint="#7ED957"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_recomendation"
-        app:startIconDrawable="@drawable/ic_temperature"
-        app:startIconTint="#7ED957">
+        tools:context=".ui.recomendation.RecomendationActivity">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextTemperature"
+        <TextView
+            android:id="@+id/title_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/title_rekomendasi_tanam"
+            android:textAppearance="@style/title_page"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/title_page"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title_page"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_recomendation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="28dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="@string/title_rekomendasi"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_page" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutTemperature"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:maxLength="2"
-            android:inputType="number"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="28dp"
+            android:hint="@string/suhu"
+            app:suffixText="@string/suffix_temperature"
+            app:endIconTint="#7ED957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recomendation"
+            app:startIconDrawable="@drawable/ic_temperature"
+            app:startIconTint="#7ED957">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutHumidity"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
-        android:hint="@string/kelembapan"
-        app:helperTextEnabled="true"
-        app:helperText="@string/skala_kelembapan"
-        app:helperTextTextColor="#7ED957"
-        app:suffixText="@string/suffix_humidity"
-        app:endIconTint="#7ED957"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTemperature"
-        app:startIconDrawable="@drawable/ic_humidity"
-        app:startIconTint="#7ED957">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="2"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextHumidity"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutHumidity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:maxLength="3"
-            android:inputType="number"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            android:hint="@string/kelembapan"
+            app:suffixText="@string/suffix_humidity"
+            app:endIconTint="#7ED957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTemperature"
+            app:startIconDrawable="@drawable/ic_humidity"
+            app:startIconTint="#7ED957">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutHectare"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
-        android:hint="@string/luas_tanah"
-        app:suffixText="@string/suffix_area"
-        app:endIconTint="#7ED957"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHumidity"
-        app:startIconDrawable="@drawable/ic_area"
-        app:startIconTint="#7ED957">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextHumidity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="3"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextHectare"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPh"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:maxLength="10"
-            android:layout_height="match_parent"
-            android:inputType="number"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            android:hint="@string/title_input_ph"
+            app:suffixText="@string/suffix_input_ph"
+            app:endIconTint="#7ED957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHumidity"
+            app:startIconDrawable="@drawable/ic_ph"
+            app:startIconTint="#7ED957">
 
-    <com.riyandifirman.farmgenius.customview.RecomendationButton
-        android:id="@+id/recomendation_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:enabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHectare" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPh"
+                android:layout_width="match_parent"
+                android:maxLength="3"
+                android:layout_height="match_parent"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRainfall"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            android:hint="@string/title_input_curah"
+            app:suffixText="@string/suffix_input_curah"
+            app:endIconTint="#7ED957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPh"
+            app:startIconDrawable="@drawable/ic_rainfall"
+            app:startIconTint="#7ED957">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextRainfall"
+                android:layout_width="match_parent"
+                android:maxLength="3"
+                android:layout_height="match_parent"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNitrogen"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            android:hint="@string/title_input_nitrogen"
+            app:suffixText="@string/suffix_input_nitrogen"
+            app:endIconTint="#7ED957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRainfall"
+            app:startIconDrawable="@drawable/ic_nitrogen"
+            app:startIconTint="#7ED957">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNitrogen"
+                android:layout_width="match_parent"
+                android:maxLength="3"
+                android:layout_height="match_parent"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutFosfor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            android:hint="@string/title_input_fosfor"
+            app:suffixText="@string/suffix_input_fosfor"
+            app:endIconTint="#7ED957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNitrogen"
+            app:startIconDrawable="@drawable/ic_fosfor"
+            app:startIconTint="#7ED957">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFosfor"
+                android:layout_width="match_parent"
+                android:maxLength="3"
+                android:layout_height="match_parent"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutKalium"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="28dp"
+            android:hint="@string/title_input_kalium"
+            app:suffixText="@string/suffix_input_kalium"
+            app:endIconTint="#7ED957"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFosfor"
+            app:startIconDrawable="@drawable/ic_kalium"
+            app:startIconTint="#7ED957">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextKalium"
+                android:layout_width="match_parent"
+                android:maxLength="3"
+                android:layout_height="match_parent"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.riyandifirman.farmgenius.customview.RecomendationButton
+            android:id="@+id/recomendation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:enabled="false"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutKalium"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -26,7 +26,7 @@
     <string name="jumlah_tanaman">20</string>
     <string name="rekomendasi_tanaman">Rekomendasi Tanaman</string>
     <string name="cari">Cari</string>
-    <string name="title_rekomendasi_tanam">Rekomendasi Tanam</string>
+    <string name="title_rekomendasi_tanam">Rekomendasi Tanaman</string>
     <string name="title_hasil_rekomendasi">Hasil Rekomendasi</string>
     <string name="title_riwayat_deteksi">Riwayat Deteksi</string>
     <string name="title_hasil_deteksi">Hasil Deteksi</string>
@@ -99,4 +99,14 @@
     <string name="kamera">Kamera</string>
     <string name="helper_password">Terdiri dari minimal 1 huruf besar dan angka (minimal 8 karakter)</string>
     <string name="skala_kelembapan">skala 1-100%</string>
+    <string name="title_input_nitrogen">Nitrogen Tanah</string>
+    <string name="title_input_fosfor">Fosfor Tanah</string>
+    <string name="title_input_kalium">Kalium Tanah</string>
+    <string name="title_input_ph">pH Tanah</string>
+    <string name="title_input_curah">Curah Hujan</string>
+    <string name="suffix_input_nitrogen">ppm</string>
+    <string name="suffix_input_fosfor">ppm</string>
+    <string name="suffix_input_kalium">ppm</string>
+    <string name="suffix_input_ph">pH</string>
+    <string name="suffix_input_curah">mm</string>
 </resources>

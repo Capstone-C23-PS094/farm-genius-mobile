@@ -21,7 +21,11 @@ class RecomendationActivity : AppCompatActivity() {
     private lateinit var backButton: ImageView
     private lateinit var temperature: EditText
     private lateinit var humidity: EditText
-    private lateinit var area: EditText
+    private lateinit var ph: EditText
+    private lateinit var rainfall: EditText
+    private lateinit var nitrogen: EditText
+    private lateinit var fosfor: EditText
+    private lateinit var kalium: EditText
     private lateinit var recomendationButton: AppCompatButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +36,11 @@ class RecomendationActivity : AppCompatActivity() {
         // Binding
         temperature = binding.editTextTemperature
         humidity = binding.editTextHumidity
-        area = binding.editTextHectare
+        ph = binding.editTextPh
+        rainfall = binding.editTextRainfall
+        nitrogen = binding.editTextNitrogen
+        fosfor = binding.editTextFosfor
+        kalium = binding.editTextKalium
         recomendationButton = binding.recomendationButton
 
         setMyButtonEnable()
@@ -67,8 +75,68 @@ class RecomendationActivity : AppCompatActivity() {
             }
         })
 
-        // listener untuk kolom area
-        area.addTextChangedListener(object : TextWatcher {
+        // listener untuk kolom ph Tanah
+        ph.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                // Do nothing.
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                setMyButtonEnable()
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                // Do nothing.
+            }
+        })
+
+        // listener untuk kolom curah hujan
+        rainfall.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                // Do nothing.
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                setMyButtonEnable()
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                // Do nothing.
+            }
+        })
+
+        // listener untuk kolom nitrogen
+        nitrogen.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                // Do nothing.
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                setMyButtonEnable()
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                // Do nothing.
+            }
+        })
+
+        // listener untuk kolom fosfor
+        fosfor.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                // Do nothing.
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                setMyButtonEnable()
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                // Do nothing.
+            }
+        })
+
+        // listener untuk kolom kalium
+        kalium.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
                 // Do nothing.
             }
@@ -106,9 +174,13 @@ class RecomendationActivity : AppCompatActivity() {
     private fun setMyButtonEnable() {
         val temperature = temperature.text
         val humidity = humidity.text
-        val area = area.text
+        val area = ph.text
+        val rainfall = rainfall.text
+        val nitrogen = nitrogen.text
+        val fosfor = fosfor.text
+        val kalium = kalium.text
         recomendationButton.isEnabled = (temperature != null && temperature.toString()
             .isNotEmpty()) && (humidity != null && humidity.toString()
-            .isNotEmpty()) && (area != null && area.toString().isNotEmpty())
+            .isNotEmpty()) && (area != null && area.toString().isNotEmpty()) && (rainfall != null && rainfall.toString().isNotEmpty()) && (nitrogen != null && nitrogen.toString().isNotEmpty()) && (fosfor != null && fosfor.toString().isNotEmpty()) && (kalium != null && kalium.toString().isNotEmpty())
     }
 }
