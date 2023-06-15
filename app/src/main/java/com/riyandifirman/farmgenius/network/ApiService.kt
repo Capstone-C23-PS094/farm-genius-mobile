@@ -1,8 +1,8 @@
 package com.riyandifirman.farmgenius.network
 
-import com.riyandifirman.farmgenius.network.responses.LoginResponse
-import com.riyandifirman.farmgenius.network.responses.RecomendationResponse
-import com.riyandifirman.farmgenius.network.responses.RegisterResponse
+import com.riyandifirman.farmgenius.network.responses.*
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -37,4 +37,20 @@ interface ApiService {
         @Field("ph") ph: Int,
         @Field("rainfall") rainfall: Int
     ): Call<RecomendationResponse>
+
+    // fungsi untuk deteksi penyakit tanaman
+    @Multipart
+    @POST("rice-disease-detection")
+    fun getDiseaseDetect(
+        @Part image: MultipartBody.Part
+    ): Call<DiseaseDetectResponse>
+
+    // fungsi untuk mengirimkan data deteksi penyakit tanaman
+    @POST("upload")
+    @FormUrlEncoded
+    fun addHistoryDisease(
+        @Header("Authorization") Bearer: String,
+        @Field("imageUrl") imageUrl: String,
+        @Field("resultDetection") resultDetection: String
+    ): Call<AddHistoryDiseaseResponse>
 }

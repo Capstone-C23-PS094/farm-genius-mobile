@@ -30,7 +30,7 @@ class ApiConfig {
             return retrofit.create(ApiService::class.java)
         }
 
-        fun getApiServiceRecomendation(): ApiService {
+        fun getApiServiceRecomendationDisease(): ApiService {
             // membuat interceptor
             val authInterceptor = if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -40,6 +40,9 @@ class ApiConfig {
 
             // membuat client baru dengan interceptor yang sudah dibuat
             val client = OkHttpClient.Builder()
+                .connectTimeout(120, java.util.concurrent.TimeUnit.SECONDS)
+                .readTimeout(120, java.util.concurrent.TimeUnit.SECONDS)
+                .writeTimeout(120, java.util.concurrent.TimeUnit.SECONDS)
                 .addInterceptor(authInterceptor)
                 .build()
 

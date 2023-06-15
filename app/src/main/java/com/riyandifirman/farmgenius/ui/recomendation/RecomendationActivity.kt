@@ -198,7 +198,7 @@ class RecomendationActivity : AppCompatActivity() {
 
     // fungsi untuk menampilkan hasil rekomendasi
     private fun showRecomendation(nitrogen: Int, phosphorous: Int, potassium: Int, temperature: Int, humidity: Int, ph: Int, rainfall: Int) {
-        val client = ApiConfig.getApiServiceRecomendation().getRecomendation(nitrogen, phosphorous, potassium, temperature, humidity, ph, rainfall)
+        val client = ApiConfig.getApiServiceRecomendationDisease().getRecomendation(nitrogen, phosphorous, potassium, temperature, humidity, ph, rainfall)
 
         client.enqueue(object : Callback<RecomendationResponse> {
             override fun onResponse(
