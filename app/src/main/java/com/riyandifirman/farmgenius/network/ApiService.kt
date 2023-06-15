@@ -53,4 +53,10 @@ interface ApiService {
         @Field("imageUrl") imageUrl: String,
         @Field("resultDetection") resultDetection: String
     ): Call<AddHistoryDiseaseResponse>
+
+    // fungsi untuk mengambil data history penyakit tanaman
+    @GET("history_detection")
+    fun getHistoryDisease(
+        @Header("Authorization") Bearer: String
+    ): Call<List<GetHistoryResponseItem>>
 }

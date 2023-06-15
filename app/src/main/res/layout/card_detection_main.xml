@@ -19,9 +19,9 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/img_item_photo"
-            android:layout_width="140dp"
-            android:layout_height="100dp"
+            android:id="@+id/iv_item_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:scaleType="centerCrop"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
@@ -29,31 +29,44 @@
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/tv_item_name"
+            android:id="@+id/tv_item_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_toEndOf="@id/img_item_photo"
+            android:layout_toEndOf="@id/iv_item_photo"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:maxLength="20"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
-            card_view:layout_constraintTop_toTopOf="@+id/img_item_photo"
+            card_view:layout_constraintStart_toEndOf="@+id/iv_item_photo"
+            card_view:layout_constraintTop_toTopOf="@+id/iv_item_photo"
             tools:text="@string/gejala_deteksi" />
 
         <TextView
-            android:id="@+id/tv_item_role"
+            android:id="@+id/tv_item_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="1"
-            card_view:layout_constraintEnd_toEndOf="@+id/tv_item_name"
-            card_view:layout_constraintStart_toStartOf="@+id/tv_item_name"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_name"
+            card_view:layout_constraintEnd_toEndOf="@+id/tv_item_title"
+            card_view:layout_constraintStart_toStartOf="@+id/tv_item_title"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
             tools:text="@string/waktu_deteksi" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lihat_button"
+            android:layout_width="60dp"
+            android:layout_height="26dp"
+            android:background="@drawable/button_see"
+            android:text="@string/lihat"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/iv_item_photo"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/iv_item_photo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
