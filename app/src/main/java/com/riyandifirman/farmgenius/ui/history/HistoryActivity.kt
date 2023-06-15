@@ -54,7 +54,8 @@ class HistoryActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val responseBody = response.body()
                     val detectDiseaseItems = responseBody as List<GetHistoryResponseItem>
-                    val detectAdapter = DetectDiseaseHistoryAdapter(detectDiseaseItems)
+                    val sortedList = detectDiseaseItems.sortedByDescending { it.detectionDate }
+                    val detectAdapter = DetectDiseaseHistoryAdapter(sortedList)
 
                     binding.rvDeteksi.apply {
                         layoutManager = LinearLayoutManager(this@HistoryActivity)
