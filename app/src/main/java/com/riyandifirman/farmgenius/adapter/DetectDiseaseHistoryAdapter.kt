@@ -1,24 +1,23 @@
 package com.riyandifirman.farmgenius.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager.widget.ViewPager.OnAdapterChangeListener
 import com.bumptech.glide.Glide
-import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.CardDetectionMainBinding
 import com.riyandifirman.farmgenius.network.responses.GetHistoryResponseItem
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DetectDiseaseHistoryAdapter(private val detectDiseaseList: List<GetHistoryResponseItem>, private val listener: OnAdapterClickListener) :
+class DetectDiseaseHistoryAdapter(
+    private val detectDiseaseList: List<GetHistoryResponseItem>,
+    private val listener: OnAdapterClickListener
+) :
     RecyclerView.Adapter<DetectDiseaseHistoryAdapter.ViewHolder>() {
 
     // inner class ViewHolder
-    class ViewHolder(private val binding: CardDetectionMainBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: CardDetectionMainBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(detectDisease: GetHistoryResponseItem) {
             // fungsi untuk mengubah format tanggal
@@ -39,7 +38,8 @@ class DetectDiseaseHistoryAdapter(private val detectDiseaseList: List<GetHistory
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = CardDetectionMainBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            CardDetectionMainBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

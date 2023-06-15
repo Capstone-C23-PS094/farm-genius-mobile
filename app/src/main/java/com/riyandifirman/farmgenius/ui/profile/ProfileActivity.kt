@@ -1,24 +1,21 @@
- package com.riyandifirman.farmgenius.ui.profile
+package com.riyandifirman.farmgenius.ui.profile
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityProfileBinding
 import com.riyandifirman.farmgenius.ui.login.LoginActivity
 import com.riyandifirman.farmgenius.ui.main.MainActivity
-import com.riyandifirman.farmgenius.ui.register.RegisterActivity
 import com.riyandifirman.farmgenius.util.Preferences
-import com.riyandifirman.farmgenius.viewmodel.MainViewModel
 import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
 
- class ProfileActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileBinding
     private lateinit var viewModel: ProfileViewModel
@@ -69,55 +66,60 @@ import com.riyandifirman.farmgenius.viewmodel.ProfileViewModel
 
         // Tombol > di klik
         // Launcher untuk pindah ke activity setting profile
-        val settingProfileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            if (it.resultCode == RESULT_OK) {
-                viewModel.init(this)
+        val settingProfileLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+                    viewModel.init(this)
+                }
             }
-        }
         settingProfile.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileSettingActivity::class.java)
             settingProfileLauncher.launch(intent)
         }
 
         // Launcher untuk pindah ke activity help centre
-        val helpCentreLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            if (it.resultCode == RESULT_OK) {
-                viewModel.init(this)
+        val helpCentreLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+                    viewModel.init(this)
+                }
             }
-        }
         helpCentre.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileHelpCentreActivity::class.java)
             helpCentreLauncher.launch(intent)
         }
 
         // Launcher untuk pindah ke activity terms and conditions
-        val termsConditionsLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            if (it.resultCode == RESULT_OK) {
-                viewModel.init(this)
+        val termsConditionsLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+                    viewModel.init(this)
+                }
             }
-        }
         termsConditions.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileTermsConditionsActivity::class.java)
             termsConditionsLauncher.launch(intent)
         }
 
         // Launcher untuk pindah ke activity privacy policy
-        val privacyPolicyLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            if (it.resultCode == RESULT_OK) {
-                viewModel.init(this)
+        val privacyPolicyLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+                    viewModel.init(this)
+                }
             }
-        }
         privacyPolicy.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfilePrivacyPolicyActivity::class.java)
             privacyPolicyLauncher.launch(intent)
         }
 
         // Launcher untuk pindah ke activity about developer
-        val aboutDeveloperLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            if (it.resultCode == RESULT_OK) {
-                viewModel.init(this)
+        val aboutDeveloperLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+                    viewModel.init(this)
+                }
             }
-        }
         aboutDeveloper.setOnClickListener {
             val intent = Intent(this@ProfileActivity, ProfileAboutDeveloperActivity::class.java)
             aboutDeveloperLauncher.launch(intent)

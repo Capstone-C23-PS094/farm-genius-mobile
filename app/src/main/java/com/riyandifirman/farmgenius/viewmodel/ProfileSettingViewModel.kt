@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.riyandifirman.farmgenius.util.Preferences
 
-class ProfileSettingViewModel: ViewModel() {
-    private lateinit var myPreferences : Preferences
+class ProfileSettingViewModel : ViewModel() {
+    private lateinit var myPreferences: Preferences
 
     private val _name = MutableLiveData<String>()
     val name: LiveData<String> get() = _name

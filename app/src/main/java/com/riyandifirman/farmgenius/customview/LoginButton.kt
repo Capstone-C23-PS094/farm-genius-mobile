@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 import com.riyandifirman.farmgenius.R
 
-class LoginButton: AppCompatButton {
+class LoginButton : AppCompatButton {
 
     private lateinit var enabledBackground: Drawable
     private lateinit var disabledBackground: Drawable
@@ -23,7 +23,11 @@ class LoginButton: AppCompatButton {
         init()
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
@@ -37,9 +41,10 @@ class LoginButton: AppCompatButton {
         text = if (isEnabled) "LOGIN" else "ISI DATA"
     }
 
-    private fun init(){
+    private fun init() {
         txtColor = ContextCompat.getColor(context, android.R.color.background_light)
         enabledBackground = ContextCompat.getDrawable(context, R.drawable.login_button) as Drawable
-        disabledBackground = ContextCompat.getDrawable(context, R.drawable.login_button_disabled) as Drawable
+        disabledBackground =
+            ContextCompat.getDrawable(context, R.drawable.login_button_disabled) as Drawable
     }
 }

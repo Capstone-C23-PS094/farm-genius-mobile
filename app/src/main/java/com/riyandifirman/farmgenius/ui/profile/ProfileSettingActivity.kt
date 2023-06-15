@@ -1,13 +1,11 @@
 package com.riyandifirman.farmgenius.ui.profile
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.google.android.material.textfield.TextInputEditText
-import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityProfileSettingBinding
 import com.riyandifirman.farmgenius.viewmodel.ProfileSettingViewModel
 

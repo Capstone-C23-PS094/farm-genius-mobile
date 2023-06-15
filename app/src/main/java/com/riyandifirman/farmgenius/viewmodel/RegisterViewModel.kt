@@ -7,16 +7,15 @@ import androidx.lifecycle.ViewModel
 import com.riyandifirman.farmgenius.network.ApiConfig
 import com.riyandifirman.farmgenius.network.responses.RegisterResponse
 import com.riyandifirman.farmgenius.ui.login.LoginActivity
-import com.riyandifirman.farmgenius.ui.register.RegisterActivity
-import com.riyandifirman.farmgenius.util.Preferences
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RegisterViewModel: ViewModel() {
+class RegisterViewModel : ViewModel() {
 
     fun register(context: Context, name: String, email: String, password: String) {
-        val token = "Bearer " + "JpZCI6Il9JOFJDN3U0enFONEk3OUsiLCJlbWFpbCI6Imh1c2FkYUBnbWFpbC5jb20iLCJpYXQiOjE2ODU4NzcxMTUsImV4cCI6MTY4NTg4MDcxNX0.IaZJBH1B00ZXatE060aVZVEXUwtMiZEGM06sy-U8kOM"
+        val token =
+            "Bearer " + "JpZCI6Il9JOFJDN3U0enFONEk3OUsiLCJlbWFpbCI6Imh1c2FkYUBnbWFpbC5jb20iLCJpYXQiOjE2ODU4NzcxMTUsImV4cCI6MTY4NTg4MDcxNX0.IaZJBH1B00ZXatE060aVZVEXUwtMiZEGM06sy-U8kOM"
         val client = ApiConfig.getApiService().registerUser(token, name, email, password)
 
         client.enqueue(object : Callback<RegisterResponse> {

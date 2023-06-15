@@ -1,12 +1,11 @@
 package com.riyandifirman.farmgenius.ui.history
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityHistoryResultDetectionBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -14,9 +13,9 @@ import java.util.*
 class HistoryResultDetectionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHistoryResultDetectionBinding
-    private lateinit var resultTitle : TextView
-    private lateinit var resultDate : TextView
-    private lateinit var resultImage : ImageView
+    private lateinit var resultTitle: TextView
+    private lateinit var resultDate: TextView
+    private lateinit var resultImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

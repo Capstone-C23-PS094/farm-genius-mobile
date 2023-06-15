@@ -4,27 +4,27 @@ import com.google.gson.annotations.SerializedName
 
 data class DiseaseDetectResponse(
 
-	@field:SerializedName("image_url")
-	val imageUrl: String,
+    @field:SerializedName("image_url")
+    val imageUrl: String,
 
-	@field:SerializedName("predictions")
-	val predictions: List<PredictionsItem>
+    @field:SerializedName("predictions")
+    val predictions: List<PredictionsItem>
 )
 
 data class PredictionsItem(
 
-	@field:SerializedName("disease")
-	val disease: Disease,
+    @field:SerializedName("disease")
+    val disease: Disease,
 
-	@field:SerializedName("percentage")
-	val percentage: Any
+    @field:SerializedName("percentage")
+    val percentage: Any
 )
 
 data class Disease(
 
-	@field:SerializedName("solutions")
-	val solutions: String,
+    @field:SerializedName("solutions")
+    val solutions: String,
 
-	@field:SerializedName("name")
-	val name: String
+    @field:SerializedName("name")
+    val name: String
 )

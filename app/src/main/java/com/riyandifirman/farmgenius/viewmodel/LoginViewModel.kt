@@ -2,7 +2,6 @@ package com.riyandifirman.farmgenius.viewmodel
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.lifecycle.ViewModel
@@ -15,9 +14,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginViewModel: ViewModel() {
+class LoginViewModel : ViewModel() {
 
-    private lateinit var myPreferences : Preferences
+    private lateinit var myPreferences: Preferences
 
     fun init(context: Context) {
         myPreferences = Preferences(context)

@@ -1,22 +1,20 @@
 package com.riyandifirman.farmgenius.ui.detection
 
+//import com.riyandifirman.farmgenius.util.rotateFile
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
-import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityDetectionBinding
 import com.riyandifirman.farmgenius.network.ApiConfig
 import com.riyandifirman.farmgenius.network.responses.AddHistoryDiseaseResponse
@@ -24,9 +22,7 @@ import com.riyandifirman.farmgenius.network.responses.DiseaseDetectResponse
 import com.riyandifirman.farmgenius.ui.main.MainActivity
 import com.riyandifirman.farmgenius.util.Preferences
 import com.riyandifirman.farmgenius.util.reduceFileImage
-//import com.riyandifirman.farmgenius.util.rotateFile
 import com.riyandifirman.farmgenius.util.uriToFile
-import com.riyandifirman.farmgenius.viewmodel.MainViewModel
 import kotlinx.coroutines.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -35,15 +31,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.File
-import java.io.Serializable
-import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
 
 class DetectionActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityDetectionBinding
-    private lateinit var backButton : ImageView
-    private lateinit var myPreferences : Preferences
+    private lateinit var binding: ActivityDetectionBinding
+    private lateinit var backButton: ImageView
+    private lateinit var myPreferences: Preferences
+
     // counter untuk mengaktifkan tombol deteksi
     private var counter = 0
     private lateinit var currentPhotoPath: String
@@ -120,15 +114,16 @@ class DetectionActivity : AppCompatActivity() {
     }
 
     // fungsi untuk menangani hasil dari pemilihan gambar dari galeri
-    private val launcherIntentGallery = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == RESULT_OK) {
-            val selectedImg: Uri = result.data?.data as Uri
-            val myFile = uriToFile(selectedImg, this)
-            getFile = myFile
+    private val launcherIntentGallery =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val selectedImg: Uri = result.data?.data as Uri
+                val myFile = uriToFile(selectedImg, this)
+                getFile = myFile
 
-            binding.ivResultImage.setImageURI(selectedImg)
+                binding.ivResultImage.setImageURI(selectedImg)
+            }
         }
-    }
 
     // fungsi untuk membuka galeri dan memilih gambar
     private fun openGallery() {
@@ -140,24 +135,25 @@ class DetectionActivity : AppCompatActivity() {
     }
 
     // fungsi untuk menangani hasil dari pemanggilan kamera
-    private val launcherIntentCamera = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        if (it.resultCode == CAMERA_X_RESULT ) {
-            val myFile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU ) {
-                it.data?.getSerializableExtra("picture", File::class.java)
-            } else {
-                @Suppress("DEPRECATION")
-                it.data?.getSerializableExtra("picture")
-            } as? File
+    private val launcherIntentCamera =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == CAMERA_X_RESULT) {
+                val myFile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    it.data?.getSerializableExtra("picture", File::class.java)
+                } else {
+                    @Suppress("DEPRECATION")
+                    it.data?.getSerializableExtra("picture")
+                } as? File
 
-            val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
+                val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
 
-            myFile?.let { file ->
+                myFile?.let { file ->
 //                rotateFile(file, isBackCamera)
-                getFile = file
-                binding.ivResultImage.setImageBitmap(BitmapFactory.decodeFile(file.path))
+                    getFile = file
+                    binding.ivResultImage.setImageBitmap(BitmapFactory.decodeFile(file.path))
+                }
             }
         }
-    }
 
     // fungsi untuk membuka kamera
     private fun openCamera() {
@@ -195,25 +191,41 @@ class DetectionActivity : AppCompatActivity() {
                 response: Response<DiseaseDetectResponse>
             ) {
                 if (response.isSuccessful) {
-                    Toast.makeText(this@DetectionActivity, "Berhasil Upload Gambar", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        this@DetectionActivity,
+                        "Berhasil Upload Gambar",
+                        Toast.LENGTH_LONG
+                    ).show()
                     val result = response.body()
 
                     // fungsi menambah data history deteksi ke server
-                    val client2 = ApiConfig.getApiService().addHistoryDisease(token, result!!.imageUrl, result.predictions[0].disease.name)
+                    val client2 = ApiConfig.getApiService().addHistoryDisease(
+                        token,
+                        result!!.imageUrl,
+                        result.predictions[0].disease.name
+                    )
 
                     client2.enqueue(object : Callback<AddHistoryDiseaseResponse> {
                         override fun onResponse(
                             call: Call<AddHistoryDiseaseResponse>,
                             response: Response<AddHistoryDiseaseResponse>
                         ) {
-                            Toast.makeText(this@DetectionActivity, "Berhasil Upload History", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@DetectionActivity,
+                                "Berhasil Upload History",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
 
                         override fun onFailure(
                             call: Call<AddHistoryDiseaseResponse>,
                             t: Throwable
                         ) {
-                            Toast.makeText(this@DetectionActivity, "Gagal Upload History", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@DetectionActivity,
+                                "Gagal Upload History",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     })
 
@@ -222,7 +234,10 @@ class DetectionActivity : AppCompatActivity() {
                         intent.putExtra("url_image", result.imageUrl)
                         intent.putExtra("disease_name", result.predictions[0].disease.name)
                         intent.putExtra("disease_solution", result.predictions[0].disease.solutions)
-                        intent.putExtra("disease_percentage", result.predictions[0].percentage.toString())
+                        intent.putExtra(
+                            "disease_percentage",
+                            result.predictions[0].percentage.toString()
+                        )
                     }
                     startActivity(intent)
                     showLoading(false)
@@ -231,7 +246,8 @@ class DetectionActivity : AppCompatActivity() {
 
             // Jika gagal
             override fun onFailure(call: Call<DiseaseDetectResponse>, t: Throwable) {
-                Toast.makeText(this@DetectionActivity, "Gagal Upload Gambar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DetectionActivity, "Gagal Upload Gambar", Toast.LENGTH_SHORT)
+                    .show()
             }
 
         })

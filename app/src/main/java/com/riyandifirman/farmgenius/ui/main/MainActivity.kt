@@ -1,30 +1,23 @@
 package com.riyandifirman.farmgenius.ui.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.adapter.DetectDiseaseHistoryAdapter
 import com.riyandifirman.farmgenius.databinding.ActivityMainBinding
 import com.riyandifirman.farmgenius.network.ApiConfig
-import com.riyandifirman.farmgenius.network.responses.Data
 import com.riyandifirman.farmgenius.network.responses.GetHistoryResponseItem
-import com.riyandifirman.farmgenius.network.responses.LoginResponse
-import com.riyandifirman.farmgenius.network.responses.RegisterResponse
 import com.riyandifirman.farmgenius.ui.detection.DetectionActivity
 import com.riyandifirman.farmgenius.ui.history.HistoryActivity
 import com.riyandifirman.farmgenius.ui.history.HistoryResultDetectionActivity
 import com.riyandifirman.farmgenius.ui.profile.ProfileActivity
 import com.riyandifirman.farmgenius.ui.recomendation.RecomendationActivity
-import com.riyandifirman.farmgenius.util.Preferences
 import com.riyandifirman.farmgenius.viewmodel.MainViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -51,39 +44,40 @@ class MainActivity : AppCompatActivity() {
         viewModel.init(this)
 
         viewModel.name.observe(this) { name ->
-             helloName.text = "Halo, $name!"
+            helloName.text = "Halo, $name!"
         }
 
         setupRecyclerView()
 
         // Set button listener
         val profileButton = binding.rectangleProfile
-        profileButton.setOnClickListener{
+        profileButton.setOnClickListener {
             val intent = Intent(this@MainActivity, ProfileActivity::class.java)
             startActivity(intent)
         }
 
         val recomendationButton = binding.cariButton
-        recomendationButton.setOnClickListener{
+        recomendationButton.setOnClickListener {
             val intent = Intent(this@MainActivity, RecomendationActivity::class.java)
             startActivity(intent)
         }
 
         val historyButton = binding.lihatLebih
-        historyButton.setOnClickListener{
+        historyButton.setOnClickListener {
             val intent = Intent(this@MainActivity, HistoryActivity::class.java)
             startActivity(intent)
         }
 
         val detectionButton = binding.fab
-        detectionButton.setOnClickListener{
+        detectionButton.setOnClickListener {
             val intent = Intent(this@MainActivity, DetectionActivity::class.java)
             startActivity(intent)
         }
 
         // Activity result launcher
         historyResultLauncher = registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult()) {
+            ActivityResultContracts.StartActivityForResult()
+        ) {
             if (it.resultCode == RESULT_OK) {
                 // Refresh activity
             }
@@ -108,7 +102,10 @@ class MainActivity : AppCompatActivity() {
                         sortedList,
                         object : DetectDiseaseHistoryAdapter.OnAdapterClickListener {
                             override fun onItemClicked(detectDisease: GetHistoryResponseItem) {
-                                val intent = Intent(this@MainActivity, HistoryResultDetectionActivity::class.java)
+                                val intent = Intent(
+                                    this@MainActivity,
+                                    HistoryResultDetectionActivity::class.java
+                                )
                                 intent.putExtra("result_name", detectDisease.detectionResult)
                                 intent.putExtra("result_image", detectDisease.imageUrl)
                                 intent.putExtra("result_date", detectDisease.detectionDate)
@@ -125,7 +122,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<GetHistoryResponseItem>>, t: Throwable) {
-                Toast.makeText(this@MainActivity, "Gagal mendapatkan data", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Gagal mendapatkan data", Toast.LENGTH_SHORT)
+                    .show()
             }
 
         })

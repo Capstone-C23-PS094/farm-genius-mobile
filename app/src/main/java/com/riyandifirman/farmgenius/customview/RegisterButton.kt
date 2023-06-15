@@ -23,7 +23,11 @@ class RegisterButton : AppCompatButton {
         init()
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
@@ -37,9 +41,11 @@ class RegisterButton : AppCompatButton {
         text = if (isEnabled) "DAFTAR" else "ISI DATA"
     }
 
-    private fun init(){
+    private fun init() {
         txtColor = ContextCompat.getColor(context, android.R.color.background_light)
-        enabledBackground = ContextCompat.getDrawable(context, R.drawable.register_button) as Drawable
-        disabledBackground = ContextCompat.getDrawable(context, R.drawable.register_button_disabled) as Drawable
+        enabledBackground =
+            ContextCompat.getDrawable(context, R.drawable.register_button) as Drawable
+        disabledBackground =
+            ContextCompat.getDrawable(context, R.drawable.register_button_disabled) as Drawable
     }
 }

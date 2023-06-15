@@ -1,27 +1,26 @@
 package com.riyandifirman.farmgenius.ui.register
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.ViewModelProvider
-import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.ActivityRegisterBinding
 import com.riyandifirman.farmgenius.ui.login.LoginActivity
 import com.riyandifirman.farmgenius.viewmodel.RegisterViewModel
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityRegisterBinding
-    private lateinit var loginHere : TextView
-    private lateinit var registerButton : AppCompatButton
-    private lateinit var name : EditText
-    private lateinit var email : EditText
-    private lateinit var password : EditText
+    private lateinit var binding: ActivityRegisterBinding
+    private lateinit var loginHere: TextView
+    private lateinit var registerButton: AppCompatButton
+    private lateinit var name: EditText
+    private lateinit var email: EditText
+    private lateinit var password: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,11 +38,12 @@ class RegisterActivity : AppCompatActivity() {
 
         // Ketika tombol register diklik
         registerButton.setOnClickListener {
-            viewModel.register (
+            viewModel.register(
                 this@RegisterActivity,
                 name.text.toString(),
                 email.text.toString(),
-                password.text.toString())
+                password.text.toString()
+            )
         }
 
         // Navigasi ke halaman login

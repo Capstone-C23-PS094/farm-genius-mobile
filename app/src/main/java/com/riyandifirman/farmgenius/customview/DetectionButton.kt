@@ -23,7 +23,11 @@ class DetectionButton : AppCompatButton {
         init()
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
@@ -37,9 +41,13 @@ class DetectionButton : AppCompatButton {
         text = if (isEnabled) "DETEKSI" else "MASUKKAN GAMBAR"
     }
 
-    private fun init(){
+    private fun init() {
         txtColor = ContextCompat.getColor(context, android.R.color.background_light)
-        enabledBackground = ContextCompat.getDrawable(context, R.drawable.button_detection_result_page) as Drawable
-        disabledBackground = ContextCompat.getDrawable(context, R.drawable.button_detection_result_page_disabled) as Drawable
+        enabledBackground =
+            ContextCompat.getDrawable(context, R.drawable.button_detection_result_page) as Drawable
+        disabledBackground = ContextCompat.getDrawable(
+            context,
+            R.drawable.button_detection_result_page_disabled
+        ) as Drawable
     }
 }

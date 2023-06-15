@@ -1,18 +1,15 @@
 package com.riyandifirman.farmgenius.ui.detection
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.riyandifirman.farmgenius.R
-import com.riyandifirman.farmgenius.databinding.ActivityDetectionBinding
 import com.riyandifirman.farmgenius.databinding.ActivityDetectionResultBinding
 import com.riyandifirman.farmgenius.ui.main.MainActivity
 
 class DetectionResultActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityDetectionResultBinding
+    private lateinit var binding: ActivityDetectionResultBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

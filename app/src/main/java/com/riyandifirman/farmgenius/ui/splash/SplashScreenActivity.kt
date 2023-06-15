@@ -1,9 +1,8 @@
 package com.riyandifirman.farmgenius.ui.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.riyandifirman.farmgenius.R
+import androidx.appcompat.app.AppCompatActivity
 import com.riyandifirman.farmgenius.databinding.ActivitySplashScreenBinding
 import com.riyandifirman.farmgenius.ui.login.LoginActivity
 import com.riyandifirman.farmgenius.ui.main.MainActivity
