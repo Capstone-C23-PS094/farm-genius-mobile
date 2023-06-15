@@ -9,6 +9,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -186,6 +187,7 @@ class DetectionActivity : AppCompatActivity() {
         // request untuk fungsi deteksi
         val client = ApiConfig.getApiServiceRecomendationDisease().getDiseaseDetect(image)
 
+        showLoading(true)
         client.enqueue(object : Callback<DiseaseDetectResponse> {
             // Jika berhasil
             override fun onResponse(
@@ -223,6 +225,7 @@ class DetectionActivity : AppCompatActivity() {
                         intent.putExtra("disease_percentage", result.predictions[0].percentage.toString())
                     }
                     startActivity(intent)
+                    showLoading(false)
                 }
             }
 
@@ -232,6 +235,12 @@ class DetectionActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+
+    // fungsi untuk menampilkan loading
+    private fun showLoading(state: Boolean) {
+        binding.progressBar.visibility = if (state) View.VISIBLE else View.INVISIBLE
     }
 
     // companion object untuk menyimpan properti dan konstanta yang digunakan di activity ini

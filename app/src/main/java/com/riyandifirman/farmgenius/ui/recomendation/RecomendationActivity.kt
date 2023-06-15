@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
@@ -200,6 +201,7 @@ class RecomendationActivity : AppCompatActivity() {
     private fun showRecomendation(nitrogen: Int, phosphorous: Int, potassium: Int, temperature: Int, humidity: Int, ph: Int, rainfall: Int) {
         val client = ApiConfig.getApiServiceRecomendationDisease().getRecomendation(nitrogen, phosphorous, potassium, temperature, humidity, ph, rainfall)
 
+        showLoading(true)
         client.enqueue(object : Callback<RecomendationResponse> {
             override fun onResponse(
                 call: Call<RecomendationResponse>,
@@ -221,6 +223,7 @@ class RecomendationActivity : AppCompatActivity() {
                         intent.putExtra("rainfall", rainfall.toString())
                     }
                     startActivity(intent)
+                    showLoading(false)
                 } else {
                     Toast.makeText(this@RecomendationActivity, "Gagal mendapatkan rekomendasi karena ${response.message()}", Toast.LENGTH_SHORT).show()
                 }
@@ -230,5 +233,10 @@ class RecomendationActivity : AppCompatActivity() {
                 Toast.makeText(this@RecomendationActivity, "Gagal mendapatkan rekomendasi", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    // fungsi untuk menampilkan loading
+    private fun showLoading(state: Boolean) {
+        binding.progressBar.visibility = if (state) View.VISIBLE else View.INVISIBLE
     }
 }
