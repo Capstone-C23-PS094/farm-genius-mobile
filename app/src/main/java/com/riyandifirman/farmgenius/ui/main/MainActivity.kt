@@ -19,6 +19,7 @@ import com.riyandifirman.farmgenius.network.responses.LoginResponse
 import com.riyandifirman.farmgenius.network.responses.RegisterResponse
 import com.riyandifirman.farmgenius.ui.detection.DetectionActivity
 import com.riyandifirman.farmgenius.ui.history.HistoryActivity
+import com.riyandifirman.farmgenius.ui.history.HistoryResultDetectionActivity
 import com.riyandifirman.farmgenius.ui.profile.ProfileActivity
 import com.riyandifirman.farmgenius.ui.recomendation.RecomendationActivity
 import com.riyandifirman.farmgenius.util.Preferences
@@ -92,7 +93,17 @@ class MainActivity : AppCompatActivity() {
                     val responseBody = response.body()
                     val detectDiseaseItems = responseBody as List<GetHistoryResponseItem>
                     val sortedList = detectDiseaseItems.sortedByDescending { it.detectionDate }
-                    val detectAdapter = DetectDiseaseHistoryAdapter(sortedList)
+                    val detectAdapter = DetectDiseaseHistoryAdapter(
+                        sortedList,
+                        object : DetectDiseaseHistoryAdapter.OnAdapterClickListener {
+                            override fun onItemClicked(detectDisease: GetHistoryResponseItem) {
+                                val intent = Intent(this@MainActivity, HistoryResultDetectionActivity::class.java)
+                                intent.putExtra("result_name", detectDisease.detectionResult)
+                                intent.putExtra("result_image", detectDisease.imageUrl)
+                                intent.putExtra("result_date", detectDisease.detectionDate)
+                                startActivity(intent)
+                            }
+                        })
                     detectCounter.text = detectDiseaseItems.size.toString()
 
                     binding.rvDeteksi.apply {

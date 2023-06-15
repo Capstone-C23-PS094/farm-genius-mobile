@@ -42,13 +42,14 @@
 
     <ImageView
         android:id="@+id/iv_result_image"
-        android:layout_width="265dp"
-        android:layout_height="177dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_result_title"
-        app:srcCompat="@drawable/result_image" />
+        app:srcCompat="@drawable/ic_picture" />
 
     <TextView
         android:id="@+id/tv_result_date"
@@ -62,20 +63,60 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_result_image" />
 
     <TextView
-        android:id="@+id/tv_result_description"
+        android:id="@+id/tv_title_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/percentage_accurate"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_date" />
+
+    <TextView
+        android:id="@+id/tv_result_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:justificationMode="inter_word"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/result_percentage"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_percentage"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_percentage"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_percentage" />
+
+    <TextView
+        android:id="@+id/tv_title_treatment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/treatment"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_percentage" />
+
+    <TextView
+        android:id="@+id/tv_result_treatment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="28dp"
-        android:textSize="16sp"
-        android:lineSpacingExtra="2sp"
-        android:textColor="@color/black"
         android:justificationMode="inter_word"
-        android:text="@string/result_descrption"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/result_treatment"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_result_date" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_treatment" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/lihat_button"
@@ -83,7 +124,7 @@
         android:layout_height="41dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_detection_result_page"
-        android:text="@string/lihat_cara_penanganan"
+        android:text="@string/beranda"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

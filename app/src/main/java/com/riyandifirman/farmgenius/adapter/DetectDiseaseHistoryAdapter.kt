@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager.OnAdapterChangeListener
 import com.bumptech.glide.Glide
 import com.riyandifirman.farmgenius.R
 import com.riyandifirman.farmgenius.databinding.CardDetectionMainBinding
@@ -13,7 +14,7 @@ import com.riyandifirman.farmgenius.network.responses.GetHistoryResponseItem
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DetectDiseaseHistoryAdapter(private val detectDiseaseList: List<GetHistoryResponseItem>) :
+class DetectDiseaseHistoryAdapter(private val detectDiseaseList: List<GetHistoryResponseItem>, private val listener: OnAdapterClickListener) :
     RecyclerView.Adapter<DetectDiseaseHistoryAdapter.ViewHolder>() {
 
     // inner class ViewHolder
@@ -49,5 +50,13 @@ class DetectDiseaseHistoryAdapter(private val detectDiseaseList: List<GetHistory
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val detectDisease = detectDiseaseList[position]
         holder.bind(detectDisease)
+        holder.itemView.setOnClickListener {
+            listener.onItemClicked(detectDisease)
+        }
+    }
+
+    // interface untuk listener
+    interface OnAdapterClickListener {
+        fun onItemClicked(detectDisease: GetHistoryResponseItem)
     }
 }

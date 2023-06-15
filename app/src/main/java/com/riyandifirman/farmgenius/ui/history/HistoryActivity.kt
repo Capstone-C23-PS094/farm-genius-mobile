@@ -55,7 +55,17 @@ class HistoryActivity : AppCompatActivity() {
                     val responseBody = response.body()
                     val detectDiseaseItems = responseBody as List<GetHistoryResponseItem>
                     val sortedList = detectDiseaseItems.sortedByDescending { it.detectionDate }
-                    val detectAdapter = DetectDiseaseHistoryAdapter(sortedList)
+                    val detectAdapter = DetectDiseaseHistoryAdapter(
+                        sortedList,
+                        object : DetectDiseaseHistoryAdapter.OnAdapterClickListener {
+                            override fun onItemClicked(detectDisease: GetHistoryResponseItem) {
+                                val intent = Intent(this@HistoryActivity, HistoryResultDetectionActivity::class.java)
+                                intent.putExtra("result_name", detectDisease.detectionResult)
+                                intent.putExtra("result_image", detectDisease.imageUrl)
+                                intent.putExtra("result_date", detectDisease.detectionDate)
+                                startActivity(intent)
+                            }
+                        })
 
                     binding.rvDeteksi.apply {
                         layoutManager = LinearLayoutManager(this@HistoryActivity)
