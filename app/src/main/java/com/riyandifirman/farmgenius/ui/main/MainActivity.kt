@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainViewModel
     private lateinit var helloName: TextView
+    private lateinit var detectCounter: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         helloName = binding.helloUser
+        detectCounter = binding.jumlahTerdeteksi
 
         // Inisialisasi ViewModel
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
@@ -49,8 +51,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         setupRecyclerView()
-
-        Log.d("TOKEN", viewModel.token)
 
         // Set button listener
         val profileButton = binding.rectangleProfile
@@ -93,6 +93,7 @@ class MainActivity : AppCompatActivity() {
                     val detectDiseaseItems = responseBody as List<GetHistoryResponseItem>
                     val sortedList = detectDiseaseItems.sortedByDescending { it.detectionDate }
                     val detectAdapter = DetectDiseaseHistoryAdapter(sortedList)
+                    detectCounter.text = detectDiseaseItems.size.toString()
 
                     binding.rvDeteksi.apply {
                         layoutManager = LinearLayoutManager(this@MainActivity)
