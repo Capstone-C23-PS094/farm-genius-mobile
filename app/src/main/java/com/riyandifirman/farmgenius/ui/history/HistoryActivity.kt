@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.riyandifirman.farmgenius.R
@@ -15,6 +17,7 @@ import com.riyandifirman.farmgenius.network.ApiConfig
 import com.riyandifirman.farmgenius.network.responses.GetHistoryResponse
 import com.riyandifirman.farmgenius.network.responses.GetHistoryResponseItem
 import com.riyandifirman.farmgenius.ui.main.MainActivity
+import com.riyandifirman.farmgenius.ui.profile.ProfileSettingActivity
 import com.riyandifirman.farmgenius.util.Preferences
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,6 +28,7 @@ class HistoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHistoryBinding
     private lateinit var backButton: ImageView
     private lateinit var myPreferences: Preferences
+    private lateinit var historyResultLauncher: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +43,14 @@ class HistoryActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             val intent = Intent(this@HistoryActivity, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        // Activity result launcher
+        historyResultLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                // Refresh activity
+            }
         }
     }
 
@@ -63,7 +75,7 @@ class HistoryActivity : AppCompatActivity() {
                                 intent.putExtra("result_name", detectDisease.detectionResult)
                                 intent.putExtra("result_image", detectDisease.imageUrl)
                                 intent.putExtra("result_date", detectDisease.detectionDate)
-                                startActivity(intent)
+                                historyResultLauncher.launch(intent)
                             }
                         })
 

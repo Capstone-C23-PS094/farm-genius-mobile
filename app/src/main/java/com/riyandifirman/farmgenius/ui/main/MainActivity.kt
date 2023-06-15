@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
     private lateinit var helloName: TextView
     private lateinit var detectCounter: TextView
+    private lateinit var historyResultLauncher: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,6 +80,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, DetectionActivity::class.java)
             startActivity(intent)
         }
+
+        // Activity result launcher
+        historyResultLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == RESULT_OK) {
+                // Refresh activity
+            }
+        }
     }
 
     // fungsi untuk menampilkan data history penyakit
@@ -101,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                                 intent.putExtra("result_name", detectDisease.detectionResult)
                                 intent.putExtra("result_image", detectDisease.imageUrl)
                                 intent.putExtra("result_date", detectDisease.detectionDate)
-                                startActivity(intent)
+                                historyResultLauncher.launch(intent)
                             }
                         })
                     detectCounter.text = detectDiseaseItems.size.toString()

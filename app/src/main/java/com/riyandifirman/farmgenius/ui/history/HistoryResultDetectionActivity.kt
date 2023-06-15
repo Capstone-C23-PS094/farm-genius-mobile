@@ -46,7 +46,9 @@ class HistoryResultDetectionActivity : AppCompatActivity() {
             .into(resultImage)
 
         binding.backButton.setOnClickListener {
-            startActivity(Intent(this, HistoryActivity::class.java))
+            val resultIntent = Intent()
+            setResult(RESULT_OK, resultIntent)
+            finish()
         }
     }
 }
