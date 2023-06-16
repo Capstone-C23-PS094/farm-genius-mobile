@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.riyandifirman.farmgenius.databinding.ActivityHistoryResultDetectionBinding
+import com.riyandifirman.farmgenius.ui.main.MainActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -48,6 +49,11 @@ class HistoryResultDetectionActivity : AppCompatActivity() {
             val resultIntent = Intent()
             setResult(RESULT_OK, resultIntent)
             finish()
+        }
+
+        binding.homeButton.setOnClickListener {
+            val intent = Intent(this@HistoryResultDetectionActivity, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
