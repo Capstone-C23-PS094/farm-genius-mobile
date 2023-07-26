@@ -42,9 +42,14 @@ Smart agriculture solution using AI for Indonesian farmers: crop recommendations
 Minimum Android 8.0 (API Level 26)
 
 ## Screenshot Application
+<b> Splash Screen & Home Page <b> <br> <br>
 <img src="https://github.com/Capstone-C23-PS094/farm-genius-mobile/assets/49358131/0d3a1a22-f69b-4814-be1d-436c78cba974" alt="Home Page" widht="500" height="500">
 <img src="https://github.com/Capstone-C23-PS094/farm-genius-mobile/assets/49358131/58f1a810-a31f-4e9c-981c-1920cdd78449" alt="Home Page" widht="500" height="500">
+
+<b> Detection Page <b> <br> <br>
 <img src="https://github.com/Capstone-C23-PS094/farm-genius-mobile/assets/49358131/736277cc-63ea-47b7-a7cc-201636c9e949" alt="Home Page" widht="500" height="500">
 <img src="https://github.com/Capstone-C23-PS094/farm-genius-mobile/assets/49358131/ec5aad74-7c30-4696-8f1d-7ce9b02df12e" alt="Home Page" widht="500" height="500">
+
+<b> Recommendation Page <b> <br> <br>
 <img src="https://github.com/Capstone-C23-PS094/farm-genius-mobile/assets/49358131/4f6612af-64aa-43f9-a44d-6ea592fdaf0a" alt="Home Page" widht="500" height="500">
 <img src="https://github.com/Capstone-C23-PS094/farm-genius-mobile/assets/49358131/0791b356-053e-4c88-b866-4b2ea43c0ddc" alt="Home Page" widht="500" height="500">
